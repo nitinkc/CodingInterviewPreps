@@ -3,7 +3,7 @@ package crackingTheCoding;
 /**
  * Created by nitinc on 2/11/2015.
  */
-public class CrackingTheCode12 {
+public class CTC12 {
     public static void main(String[] args){
         System.out.println(revString("abcdefghijklmopqrstuvwxyz"));
         System.out.println(revString(""));

@@ -8,7 +8,7 @@ import java.util.ListIterator;
 /**
  * Created by nitin on 2/21/15.
  */
-public class CrackingTheCode21 {
+public class CTC21 {
 
     public static void main(String[] args){
         List<Integer> ll = new LinkedList<Integer>();

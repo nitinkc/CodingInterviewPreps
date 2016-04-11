@@ -1,7 +1,8 @@
 package crackingTheCoding;
 import java.util.Scanner;
 
-public class RemDupChar {
+/* Remove Duplicate characters in a String */
+public class CTC13 {
 
 	public static void main(String[] args) {
 		

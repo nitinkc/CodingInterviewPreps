@@ -1,11 +1,12 @@
 package crackingTheCoding; /**
  *
  * Created by nitinc on 2/11/2015.
+ *
  */
 
 import java.util.Set;
 import java.util.HashSet;
-public class CrackingTheCode11 {
+public class CTC11 {
     public static void main(String[] args) {
         System.out.println(hasUniqueChar("Nit"));
         System.out.println(hasUniqueChar("Nitin"));
