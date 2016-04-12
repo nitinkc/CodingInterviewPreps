@@ -385,5 +385,4 @@ Scanner ipFile = new Scanner(myFile); //instead of System.in
 ```
 
 ##### Insert Java Code
-{% highlight java linenos %}
-{% endhighlight %}
+{% gist nitinkc/619d22e2ae458a3f174b0297019e6fd5 %}
