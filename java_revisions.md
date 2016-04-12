@@ -385,4 +385,4 @@ Scanner ipFile = new Scanner(myFile); //instead of System.in
 ```
 
 ##### Insert Java Code
-{% gist nitinkc/619d22e2ae458a3f174b0297019e6fd5 %}
+<script src="https://gist.github.com/nitinkc/005dcffcb88fad3402298984a4d4cd9f.js"></script>
