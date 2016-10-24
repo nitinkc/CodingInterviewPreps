@@ -92,7 +92,7 @@ public class BST implements IBinarySearchTree{
     public void delete(BSTNode node){
     // Case 1: node does not have a child, just delete it
     	if (node.left == null && node.right == null){//Conforming the node is the last one
-    		//Test which child is the current node (of parent).
+    		//GenericSort which child is the current node (of parent).
     		if(node.parent != null && node.parent.left == node)
     			node.parent.left = null;
     		

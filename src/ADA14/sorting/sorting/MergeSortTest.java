@@ -2,7 +2,7 @@
 //
 //import static org.junit.Assert.*;
 //
-//import org.junit.Test;
+//import org.junit.GenericSort;
 //
 //import static org.junit.Assert.assertTrue;
 //import static org.junit.Assert.fail;
@@ -11,7 +11,7 @@
 //import java.util.Random;
 //
 //import org.junit.Before;
-//import org.junit.Test;
+//import org.junit.GenericSort;
 //
 //public class MergeSortTest {
 //
@@ -28,7 +28,7 @@
 //    }
 //  }
 //
-//  @Test
+//  @GenericSort
 //  public void testMergeSort() {
 //    long startTime = System.currentTimeMillis();
 //
@@ -48,7 +48,7 @@
 //
 //  }
 //
-//  @Test
+//  @GenericSort
 //  public void itWorksRepeatably() {
 //    for (int i = 0; i < 200; i++) {
 //      numbers = new int[SIZE];
@@ -67,7 +67,7 @@
 //    }
 //  }
 //
-//  @Test
+//  @GenericSort
 //  public void testStandardSort() {
 //    long startTime = System.currentTimeMillis();
 //    Arrays.sort(numbers);

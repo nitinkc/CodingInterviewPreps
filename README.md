@@ -2,12 +2,8 @@
 
 ### Language of the knowledge capabilities is most important.
 
-# Summary
-
 * [Introduction](README.md)
-* [Strings](strings.md)
-* [Java Revisions](java_revisions.md)
-
+* [Java Revisions](http://nitinkc.github.io/static/java_revisions/)
 
 This book in not for the beginners. 
 A first few chapters can be used for the revisions. 
