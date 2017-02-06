@@ -22,7 +22,8 @@ public class Solution {
         for (int i = 1; i <= 10; i++){
             last10 = last10 + sum.mod(BigInteger.TEN).toString();
             sum = sum.divide(BigInteger.TEN); 
-        }        
+        }
+
         String rev = new StringBuffer(last10).reverse().toString();
         System.out.println(Long.valueOf(rev));
     }

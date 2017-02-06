@@ -48,6 +48,4 @@ public class QuickSort {
         }
         return i;
     }
-
-
 }

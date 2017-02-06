@@ -1,5 +1,3 @@
-package manage;
-
 public class TriangularNumbers {
 	public static void main(String[] args) {
 		int m = 2;
