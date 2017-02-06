@@ -33,7 +33,8 @@ class Stack{
         // O(n) extra space complexity
         ArrayList<Integer> temp = stack;
 
-        Collections.sort(temp);//o(nlogn) operation
+        Collections.sort(temp);
+        // O(nlogn) operation
 
         return temp.get (0);
     }

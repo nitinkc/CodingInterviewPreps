@@ -15,7 +15,6 @@ public class StackDriver{
         s.push(84); s.push(96); s.push(108);
         s.push(120); s.push(132); s.push(144);
 
-
         System.out.println(s.pop());
         System.out.println(s.pop());
 

@@ -46,8 +46,6 @@ public class ParenthesisChecker {
                 }
             }
         }
-
         return (stack.empty());
-
     }
 }
