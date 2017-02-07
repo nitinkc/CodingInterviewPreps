@@ -10,8 +10,13 @@ public class DFSWithStack {
 
     private Stack<Vertex> stack;
 
+    public DFSWithStack() {
+        this.stack = new Stack<>();
+    }
+
     public void dfs(List<Vertex> vertexList){
 
+        // if there are clusters
         for(Vertex v : vertexList){
             if(!v.isVisited()){
                 v.setVisited(true);
