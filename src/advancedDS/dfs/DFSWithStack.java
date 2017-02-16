@@ -8,6 +8,7 @@ import java.util.Stack;
  */
 public class DFSWithStack {
 
+    // private Stack<Vertex> stack = new Stack<>(); // Bad Practise
     private Stack<Vertex> stack;
 
     public DFSWithStack() {
