@@ -8,14 +8,14 @@ import java.util.List;
  * Memory slightly better than BFS. Bit more memory friendly
  * O(V+E)
  */
-public class Driver {
+public class DriverStack {
     public static void main(String[] args) {
         Vertex v1 = new Vertex("1");
         Vertex v2 = new Vertex("2");
-        Vertex v3 = new Vertex("13");
-        Vertex v4 = new Vertex("5");
-        Vertex v5 = new Vertex("7");
-        Vertex v6 = new Vertex("34");
+        Vertex v3 = new Vertex("3");
+        Vertex v4 = new Vertex("45");
+        Vertex v5 = new Vertex("6");
+        Vertex v6 = new Vertex("7");
 
         List<Vertex> list = new ArrayList<>();
 
@@ -25,7 +25,10 @@ public class Driver {
         list.add(v1); list.add(v2); list.add(v3);
         list.add(v4); list.add(v5); list.add(v6);
 
-        DFSWithStack dfs = new DFSWithStack();
-        dfs.dfs(list);
+        DFSWithStack dfsWithStack = new DFSWithStack();
+        dfsWithStack.dfs(list);
+
+
+
     }
 }
