@@ -1,5 +1,4 @@
-package com.balazsholczer.bst;
-
+package dataStructures.binarySearchTree;
 public class Person implements Comparable<Person> {
 
 	private String name;

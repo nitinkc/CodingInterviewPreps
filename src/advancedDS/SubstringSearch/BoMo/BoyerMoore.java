@@ -1,4 +1,4 @@
-package SubstringSearch;
+package advancedDS.SubstringSearch.BoMo;
 
 import java.util.HashMap;
 import java.util.Map;

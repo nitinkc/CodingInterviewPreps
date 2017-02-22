@@ -1,5 +1,4 @@
-package com.balazsholczer.bst;
-
+package dataStructures.binarySearchTree;
 public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 
 	private Node<T> root;

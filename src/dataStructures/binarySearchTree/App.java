@@ -1,12 +1,11 @@
-package com.balazsholczer.bst;
-
+package dataStructures.binarySearchTree;
 public class App {
 
 	public static void main(String[] args) {
 		
 		
 		// O(N)   OR  O(logN)
-		Tree<Person> bst = new BinarySearchTree<>();
+		Tree<Person> bst = new BinarySearchTree<Person>();
 		
 		bst.insert(new Person("Adam",27));
 		bst.insert(new Person("Kevin",13));

@@ -1,4 +1,4 @@
-package dataStructures.BalancedBinaryTrees.avlGeneric.avl;
+package dataStructures.BalancedBinaryTrees.avlGeneric;
 
 
 public class AvlTree<T extends Comparable<T>> implements Tree<T> {

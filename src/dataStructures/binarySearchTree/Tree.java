@@ -1,5 +1,4 @@
-package com.balazsholczer.bst;
-
+package dataStructures.binarySearchTree;
 public interface Tree<T> {
 	public void traversal();
 	public void insert(T data);

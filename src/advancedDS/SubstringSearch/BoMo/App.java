@@ -1,4 +1,4 @@
-package BoyerMoore;
+package advancedDS.SubstringSearch.BoMo;
 
 public class App {
 

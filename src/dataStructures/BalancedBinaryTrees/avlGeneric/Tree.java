@@ -1,4 +1,4 @@
-package dataStructures.BalancedBinaryTrees.avlGeneric.avl;
+package dataStructures.BalancedBinaryTrees.avlGeneric;
 
 public interface Tree<T> {
 	public void insert(T data);
