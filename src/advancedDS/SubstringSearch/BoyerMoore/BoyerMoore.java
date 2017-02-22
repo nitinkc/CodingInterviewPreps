@@ -1,4 +1,4 @@
-package SubstringSearch;
+package advancedDS.SubstringSearch.BoyerMoore;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.balazsholczer.bst;
+package dataStructures.bst;
 
 public interface Tree<T> {
 	public void traversal();

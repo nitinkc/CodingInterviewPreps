@@ -1,4 +1,4 @@
-package com.balazsholczer.bst;
+package dataStructures.bst;
 
 public class Node<T> {
 

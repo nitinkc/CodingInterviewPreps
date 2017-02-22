@@ -1,5 +1,5 @@
 package dataStructures.sorting;
 
-public class InsertionSort {
+public class InsertionSortbalaz {
 
 }
