@@ -17,7 +17,7 @@ public class DFSWithStack {
 
     public void dfs(List<Vertex> vertexList){
 
-        // if there are clusters
+        // if there are clusters, of multiple unconnected graph
         for(Vertex v : vertexList){
             if(!v.isVisited()){
                 v.setVisited(true);

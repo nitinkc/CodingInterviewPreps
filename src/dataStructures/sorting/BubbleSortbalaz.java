@@ -1,7 +1,5 @@
 package dataStructures.sorting;
-
-public class BubbleSortbalaz
-{
+public class BubbleSortbalaz {
 
 	public static void main(String[] args) {
 

@@ -12,6 +12,11 @@ public class Vertex {
     private List<Vertex> neighbourList;
 
 
+    // Check this method
+    public void addNeighbourVertex(Vertex vertex){
+        this.neighbourList.add(vertex);
+    }
+
     public Vertex(int data){
         this.data = data;
         this.neighbourList = new ArrayList<>();
@@ -41,10 +46,6 @@ public class Vertex {
         this.neighbourList = neighbourList;
     }
 
-    // Check this method
-   public void addNeighbourVertex(Vertex vertex){
-        this.neighbourList.add(vertex);
-   }
     @Override
     public String toString(){
         return "" + this.data;
