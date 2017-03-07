@@ -12,3 +12,28 @@ solve [codingbat](http://codingbat.com/java) style problems.
 
 Here in this book I am not covering anything that is tangential from the Coding interview Preparations.
 
+# Data Structures
+  - Arrays
+  - Linked List
+  - Stacks
+  - Queues
+  - HashTables (Maps and Dictionary)
+  - Binary Search Trees
+  - Heaps (Priority Queues)
+  - Binary Heaps
+  - Balanced Trees : AVL
+  - Balanced Trees : Red-Black Trees
+  - Splay Trees
+  - B-Trees
+  - Prefix Trees - Tries
+  - Ternary Search Tree 
+
+# Algorithms
+  - Sorting Algorithms
+       - Heap Sort
+  - Substring Search
+    - Brute Force
+    - Boyer-Moore
+    - Rabin-Karp
+  - Strings
+  - Data Compression Algorithms
