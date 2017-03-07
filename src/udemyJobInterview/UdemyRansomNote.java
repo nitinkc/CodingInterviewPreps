@@ -40,7 +40,7 @@ public class UdemyRansomNote {
                 int wordsCount = wordsLeft.get(word);
                 wordsCount--;//Decrement the counter,a nd then save back in the Map
                 if(wordsCount == 0){
-                    // remove the word because word : 0 is one wntry and the Map will not be empty
+                    // remove the word because word : 0 is one entry and the Map will not be empty
                     wordsLeft.remove(word);
                 }
                 else{
