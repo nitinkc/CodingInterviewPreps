@@ -18,10 +18,7 @@ public class Problem3 {
         int prod = temp1*temp2*temp3;
 
         for (int i = 3; i < array_of_ints.length; i++) {
-
-
         }
         return prod;
-
     }
 }

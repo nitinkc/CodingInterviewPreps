@@ -19,8 +19,7 @@ Here in this book I am not covering anything that is tangential from the Coding 
   - Queues
   - HashTables (Maps and Dictionary)
   - Binary Search Trees
-  - Heaps (Priority Queues)
-  - Binary Heaps
+  - Heaps (Binary Heaps/Priority Queues)
   - Balanced Trees : AVL
   - Balanced Trees : Red-Black Trees
   - Splay Trees

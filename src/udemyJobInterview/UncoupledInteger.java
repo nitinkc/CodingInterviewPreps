@@ -1,4 +1,4 @@
-package udemyJobInterview.basic;
+package udemyJobInterview;
 
 import java.util.HashSet;
 import java.util.Set;

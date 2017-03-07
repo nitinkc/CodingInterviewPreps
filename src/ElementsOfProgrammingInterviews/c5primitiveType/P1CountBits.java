@@ -1,4 +1,4 @@
-package EPI.c5primitiveType;
+package ElementsOfProgrammingInterviews.c5primitiveType;
 
 /**
  * Created by Nitin Chaurasia on 2/12/17 at 11:07 PM.

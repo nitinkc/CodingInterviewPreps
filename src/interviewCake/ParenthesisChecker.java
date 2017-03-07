@@ -4,12 +4,21 @@ import java.util.Stack;
 
 /**
  * Created by nitin on 2/25/15.
+ * Correct Approach : Use Stack as an Intermediate DS. Push on closurs and pop on closures
  */
 public class ParenthesisChecker {
     public static void main(String[] args) {
 
         boolean result1 = parenthesisChecker("([])");
         System.out.println("Result1 = " + result1);
+
+        boolean result4 = parenthesisChecker("{[]()}");
+        boolean result2 = parenthesisChecker("{[(])}");
+        boolean result3 = parenthesisChecker("{[}");
+
+        System.out.println("Result1 = " + result1);
+        System.out.println("Result2 = " + result2);
+        System.out.println("Result3 = " + result3);
 
 //        boolean result2 = parenthesisChecker("{[(])}");
 //        System.out.println("Result2 = " + result2);
@@ -33,7 +42,7 @@ public class ParenthesisChecker {
             if (curr == '(' || curr == '[' || curr == '{') {
                 stack.push(curr);
             } else { // pop on similar CLOSURES
-                // ALSO CHECK IF SIMIAR IS COMING OUT
+                // ALSO CHECK IF SIMILAR IS COMING OUT
                 char top = stack.peek();//top element of stack
                 //System.out.println(top);
                 if (    ((top == '(') && (curr == ')')) ||
