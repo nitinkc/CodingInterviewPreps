@@ -1,4 +1,4 @@
-package com.balazsholczer.avl;
+package dataStructures.BalancedBinaryTrees.avl;
 
 
 public class AvlTree implements Tree {

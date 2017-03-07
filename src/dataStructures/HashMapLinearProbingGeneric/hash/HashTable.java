@@ -1,4 +1,5 @@
-package com.balazsholczer.hash;
+package dataStructures.HashMapLinearProbingGeneric.hash;
+
 
 @SuppressWarnings("unchecked")
 public class HashTable<Key, Value> {

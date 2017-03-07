@@ -1,4 +1,4 @@
-package com.balazsholczer.merge;
+package dataStructures.sorting.merge;
 
 public class MergeSort {
 

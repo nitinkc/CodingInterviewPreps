@@ -1,4 +1,4 @@
-package StackArray;
+package dataStructures.StackArray;
 
 public class App {
 

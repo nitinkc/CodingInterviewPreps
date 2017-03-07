@@ -1,4 +1,4 @@
-package SplayTree;
+package dataStructures.SplayTree;
 
 public interface Tree<T extends Comparable<T>> {
 	public void insert(T data);

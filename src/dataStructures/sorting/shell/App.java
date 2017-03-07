@@ -1,4 +1,4 @@
-package com.balazsholczer.shell;
+package dataStructures.sorting.shell;
 
 public class App {
 

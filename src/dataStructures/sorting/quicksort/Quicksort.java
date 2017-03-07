@@ -1,4 +1,4 @@
-package com.balazsholczer.quicksort;
+package dataStructures.sorting.quicksort;
 
 public class Quicksort {
 

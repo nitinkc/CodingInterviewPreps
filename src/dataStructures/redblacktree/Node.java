@@ -1,4 +1,4 @@
-package com.balazsholczer.redblacktree;
+package dataStructures.redblacktree;
 
 public class Node {
 

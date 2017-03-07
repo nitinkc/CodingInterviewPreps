@@ -1,4 +1,4 @@
-package StackLinkedList;
+package dataStructures.StackLinkedList;
 
 public class Node<T extends Comparable<T>> {
 

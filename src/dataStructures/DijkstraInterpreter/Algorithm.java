@@ -1,4 +1,4 @@
-package DijkstraInterpreter;
+package dataStructures.DijkstraInterpreter;
 
 import java.util.Stack;
 

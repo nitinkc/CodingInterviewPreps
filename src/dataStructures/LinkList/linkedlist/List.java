@@ -1,4 +1,4 @@
-package com.balazsholczer.linkedlist;
+package dataStructures.LinkList.linkedlist;
 
 public interface List<T> {
     public void insert(T data);

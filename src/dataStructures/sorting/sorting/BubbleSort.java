@@ -1,4 +1,4 @@
-package com.balazsholczer.sorting;
+package dataStructures.sorting.sorting;
 
 public class BubbleSort {
 

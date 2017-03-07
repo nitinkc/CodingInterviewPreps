@@ -1,4 +1,4 @@
-package PriorityQueues;
+package dataStructures.PriorityQueues;
 
 public class Person implements Comparable<Person> {
 

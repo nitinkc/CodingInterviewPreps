@@ -1,4 +1,4 @@
-package Heap;
+package dataStructures.Heap;
 
 public class Heap {
 

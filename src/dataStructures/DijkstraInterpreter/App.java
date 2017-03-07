@@ -1,4 +1,4 @@
-package DijkstraInterpreter;
+package dataStructures.DijkstraInterpreter;
 
 public class App {
 

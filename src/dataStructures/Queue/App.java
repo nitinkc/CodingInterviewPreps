@@ -1,4 +1,4 @@
-package Queue;
+package dataStructures.Queue;
 
 public class App {
 

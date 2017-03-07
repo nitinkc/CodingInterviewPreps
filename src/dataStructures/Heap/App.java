@@ -1,4 +1,4 @@
-package Heap;
+package dataStructures.Heap;
 
 public class App {
 	public static void main(String[] args) {

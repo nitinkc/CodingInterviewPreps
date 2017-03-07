@@ -1,4 +1,4 @@
-package com.balazsholczer.hash;
+package dataStructures.HashMapLinearProbingGeneric.hash;
 
 public class Constants {
 

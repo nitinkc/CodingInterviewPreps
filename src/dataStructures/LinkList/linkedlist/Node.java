@@ -1,4 +1,4 @@
-package  com.balazsholczer.linkedlist;
+package dataStructures.LinkList.linkedlist;
 
 public class Node<T extends Comparable<T>> {
 

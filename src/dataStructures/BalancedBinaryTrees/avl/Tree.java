@@ -1,4 +1,4 @@
-package com.balazsholczer.avl;
+package dataStructures.BalancedBinaryTrees.avl;
 
 public interface Tree {
 	public void insert(int data);

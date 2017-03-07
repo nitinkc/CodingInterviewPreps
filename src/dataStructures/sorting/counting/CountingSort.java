@@ -1,4 +1,4 @@
-package com.balazsholczer.counting;
+package dataStructures.sorting.counting;
 
 public class CountingSort {
 
