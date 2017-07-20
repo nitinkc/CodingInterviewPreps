@@ -1,4 +1,4 @@
-package a1DataStructures.ds6BinaryTrees;
+package a1DataStructures.ds6BinaryTrees.myTree;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,7 +21,7 @@ public class BinarySearchDriver {
 	public static void main(String[] args) {
 				
 		BST bst = new BST();
-		File file = new File("src/ADA14/sorting/BinaryTrees/data.txt");
+		File file = new File("src/a1DataStructures/ds6BinaryTrees/myTree/data.txt");
 		Scanner inputFile = null;
 		try {
 			inputFile = new Scanner(file);

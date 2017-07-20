@@ -9,8 +9,7 @@ import java.util.List;
 public class Vertex {
     private int data;
     private boolean visited;
-    private List<Vertex> neighbourList;
-
+    private List<Vertex> neighbourList;//adjacency list
 
     // Check this method
     public void addNeighbourVertex(Vertex vertex){
@@ -19,7 +18,7 @@ public class Vertex {
 
     public Vertex(int data){
         this.data = data;
-        this.neighbourList = new ArrayList<>();
+        this.neighbourList = new ArrayList<>();// INSTANTIATE NEIGHBOUR LIST
     }
 
     public int getData() {

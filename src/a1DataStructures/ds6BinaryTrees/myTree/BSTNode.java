@@ -1,4 +1,4 @@
-package a1DataStructures.ds6BinaryTrees;
+package a1DataStructures.ds6BinaryTrees.myTree;
 
 /*
  * |----------------------------------------|
