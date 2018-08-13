@@ -7,7 +7,7 @@ public class App {
 		
 		heap.insert(10);
 		heap.insert(100);
-		heap.insert(-10);
+		heap.insert(101);
 		
 		heap.heapsort();
 		
