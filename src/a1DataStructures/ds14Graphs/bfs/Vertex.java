@@ -1,4 +1,4 @@
-package a2Algorithms.bfs;
+package a1DataStructures.ds14Graphs.bfs;
 
 import java.util.ArrayList;
 import java.util.List;

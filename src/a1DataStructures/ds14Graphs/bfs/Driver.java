@@ -1,4 +1,4 @@
-package a2Algorithms.bfs;
+package a1DataStructures.ds14Graphs.bfs;
 
 /**
  * Created by Nitin Chaurasia on 2/6/17 at 12:04 AM.

@@ -1,4 +1,4 @@
-package a2Algorithms.dfs;
+package a1DataStructures.ds14Graphs.dfs;
 
 import java.util.List;
 import java.util.Stack;

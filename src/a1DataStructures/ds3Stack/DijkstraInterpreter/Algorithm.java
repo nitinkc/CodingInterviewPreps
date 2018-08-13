@@ -1,4 +1,4 @@
-package a2Algorithms.DijkstraInterpreter;
+package a1DataStructures.ds3Stack.DijkstraInterpreter;
 
 import java.util.Stack;
 

@@ -26,8 +26,10 @@ public class App {
         queue.add(new Person("Adam", -1));
         queue.add(new Person("Joe", 123));
         queue.add(new Person("Agi", 37));
+        queue.add(new Person("Nitin",234));
         
-        // O(logN)
+        // O(logN)add(new Person("Balazs", 55));
+        //        queue.add
 
         System.out.println(queue.remove());
         System.out.println(queue.remove());

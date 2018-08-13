@@ -1,4 +1,4 @@
-package a2Algorithms.bfs;
+package a1DataStructures.ds14Graphs.bfs;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -13,8 +13,8 @@ public class BFS {
         // Linked List Implementation of Queue
         Queue<Vertex> queue = new LinkedList<>();
 
-        root.setVisited(true);
         queue.add(root);
+        root.setVisited(true);
 
         while(!queue.isEmpty()){
             Vertex currentVertex = queue.remove();
