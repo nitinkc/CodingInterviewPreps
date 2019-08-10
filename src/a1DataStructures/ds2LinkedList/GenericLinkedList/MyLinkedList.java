@@ -60,7 +60,7 @@ public class MyLinkedList implements NitinLinkedList{
             head = prev.next;
             prev = null;
         }
-        head =null;//Finally Remove the head node as wee
+        head =null;//Finally Remove the head node as well
 
     }
 

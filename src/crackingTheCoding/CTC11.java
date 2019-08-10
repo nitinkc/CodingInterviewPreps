@@ -33,6 +33,7 @@ public class CTC11 {
     public static boolean hasUniqueChar(String str){
         Set<Character> s = new HashSet<Character>();
         for (int i = 0; i < str.length(); i++) {
+        // If on adding the character, if its already present, set.add() returns false
             if(s.add(str.charAt(i)) == false){
                 return false;
             }

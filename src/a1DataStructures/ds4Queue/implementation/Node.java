@@ -1,4 +1,4 @@
-package a1DataStructures.ds4Queue;
+package a1DataStructures.ds4Queue.implementation;
 
 public class Node<T extends Comparable<T>> {
 
