@@ -1,5 +1,19 @@
-### Java template
+# Eclipse
+.classpath
+.project
+.settings/
 
+# Intellij
 .idea/
+*.iml
+*.iws
 out/
-CodingInterviewPreps.iml
+
+# Mac
+.DS_Store
+
+# Output files of programs
+*.txt
+
+# Maven Related
+target/
