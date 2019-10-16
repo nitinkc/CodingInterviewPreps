@@ -1,4 +1,4 @@
-package interviewCake;
+package main.java.interviewCake;
 
 import java.util.Stack;
 
@@ -8,26 +8,27 @@ import java.util.Stack;
  */
 public class ParenthesisChecker {
     public static void main(String[] args) {
-
         boolean result1 = parenthesisChecker("([])");
         System.out.println("Result1 = " + result1);
 
-        boolean result4 = parenthesisChecker("{[]()}");
         boolean result2 = parenthesisChecker("{[(])}");
-        boolean result3 = parenthesisChecker("{[}");
-
-        System.out.println("Result1 = " + result1);
         System.out.println("Result2 = " + result2);
+
+        boolean result3 = parenthesisChecker("{[}");
         System.out.println("Result3 = " + result3);
 
-//        boolean result2 = parenthesisChecker("{[(])}");
-//        System.out.println("Result2 = " + result2);
-//
-//        boolean result3 = parenthesisChecker("([{}])");
-//        System.out.println("Result3 = " + result3);
+        boolean result4 = parenthesisChecker("{[]()}");
+        System.out.println("Result4 = " + result4);
+
+        boolean result5 = parenthesisChecker("{[(])}");
+        System.out.println("Result5 = " + result5);
+
+        boolean result6 = parenthesisChecker("([{}])");
+        System.out.println("Result6 = " + result6);
     }
 
     public static boolean parenthesisChecker(String str) {
+        System.out.println("Pattern is : " + str);
         boolean result = false;
         if (str.length() % 2 != 0 || str.length() == 0)
             return false;

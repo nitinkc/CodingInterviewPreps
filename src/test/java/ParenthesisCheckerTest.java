@@ -1,6 +1,3 @@
-import interviewCake.ParenthesisChecker;
-import org.junit.Assert;
-
 class ParenthesisCheckerTest {
 
    /* @Test
