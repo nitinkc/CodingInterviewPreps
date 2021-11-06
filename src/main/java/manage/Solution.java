@@ -1,7 +1,7 @@
 package manage;
 
-import java.util.*;
-import java.math.*;
+import java.math.BigInteger;
+import java.util.Scanner;
 
 public class Solution {
 

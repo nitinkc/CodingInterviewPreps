@@ -1,6 +1,7 @@
 package topCoder.SRM652Div2;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 /**
  * Created by nitinc on 2/27/2015.
  * 250 Point Problem

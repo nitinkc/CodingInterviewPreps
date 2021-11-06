@@ -1,3 +1,5 @@
+package manage;
+
 import java.util.Scanner;
 
 /**

@@ -1,5 +1,4 @@
 package crackingTheCoding;
-import java.util.Scanner;
 
 /* Remove Duplicate characters in a String */
 public class CTC13 {

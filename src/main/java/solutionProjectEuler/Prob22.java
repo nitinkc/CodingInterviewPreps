@@ -15,7 +15,8 @@ package solutionProjectEuler;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Prob22 {
 	public static void main(String[] args) {

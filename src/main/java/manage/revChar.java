@@ -1,3 +1,5 @@
+package manage;
+
 public class revChar {
 
 	public static void main(String[] args) {

@@ -1,6 +1,8 @@
 package topCoder.SRM528Div1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 /*
 Thursday, July 12, 2012 at 7:21 AM
 In Mumbai, after a little reading of the Kathy Sierra and Collections Framework.

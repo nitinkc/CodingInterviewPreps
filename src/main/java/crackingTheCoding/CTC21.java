@@ -3,7 +3,6 @@ package crackingTheCoding;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 
 /**
  * Created by nitin on 2/21/15.

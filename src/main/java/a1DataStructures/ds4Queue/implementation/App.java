@@ -1,7 +1,5 @@
 package a1DataStructures.ds4Queue.implementation;
 
-import a1DataStructures.ds4Queue.implementation.Queue;
-
 public class App {
 
 	/**

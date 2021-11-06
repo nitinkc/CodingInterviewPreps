@@ -1,3 +1,5 @@
+package manage;
+
 public class PrimalityTesting {
 
 	public static void main(String[] args) {

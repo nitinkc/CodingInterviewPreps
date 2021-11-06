@@ -1,7 +1,5 @@
 package a1DataStructures.ds3Stack.StackArray;
 
-import java.util.List;
-
 public class App {
 
 	/**

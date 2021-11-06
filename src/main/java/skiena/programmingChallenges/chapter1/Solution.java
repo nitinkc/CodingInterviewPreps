@@ -3,7 +3,10 @@ package skiena.programmingChallenges.chapter1;
 /**
  * Created by Nitin Chaurasia on 6/19/15 at 2:33 AM.
  */
-import java.io.*;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Solution {
 

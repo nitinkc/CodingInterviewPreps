@@ -8,7 +8,9 @@ package skiena.programmingChallenges.chapter1;
  *  java program model for www.programming-challenges.com
  */
 
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 class Main{

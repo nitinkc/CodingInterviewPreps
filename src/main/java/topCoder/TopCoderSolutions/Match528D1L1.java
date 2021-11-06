@@ -1,5 +1,8 @@
 package topCoder.TopCoderSolutions;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 public class Match528D1L1 {
 	public static void main(String[] args) {
 		

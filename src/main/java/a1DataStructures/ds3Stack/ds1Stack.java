@@ -1,7 +1,6 @@
 package a1DataStructures.ds3Stack;
 
 import java.util.Iterator;
-import java.util.List;
 import java.util.Stack;
 
 public class ds1Stack {

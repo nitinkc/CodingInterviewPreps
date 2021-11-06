@@ -4,8 +4,6 @@ package crackingTheCoding; /**
  *
  */
 
-import java.util.Set;
-import java.util.HashSet;
 public class CTC11 {
     public static void main(String[] args) {
         System.out.println(hasUniqueChar("Nit"));

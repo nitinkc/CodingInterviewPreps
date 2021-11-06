@@ -1,9 +1,10 @@
-package main.java;
+package manage;
 
-import java.util.*;
-import java.util.function.Consumer;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.function.Function;
-import java.util.function.Predicate;
 
 public class HasUniqueCharJava8 {
     public static void main(String[] args) {
