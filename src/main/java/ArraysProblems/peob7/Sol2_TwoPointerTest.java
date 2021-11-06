@@ -1,3 +1,4 @@
+/*
 package ArraysProblems.peob7;
 
 import org.junit.Assert;
@@ -68,4 +69,4 @@ public class Sol2_TwoPointerTest {
 
     }
 
-}
+}*/

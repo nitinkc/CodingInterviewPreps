@@ -1,3 +1,4 @@
+/*
 package ArraysProblems;
 
 import org.junit.Test;
@@ -71,3 +72,4 @@ class ArraySumtotargetTest {
 
 // Add, edit, or remove tests in this file.
 // Treat it as your playground!
+*/

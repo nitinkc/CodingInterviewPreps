@@ -1,3 +1,5 @@
+import java.util.Collections;
+
 /**
  *
  * If the list has -1, its the end of the list
@@ -9,23 +11,9 @@ public class Test {
 
     public static void main(String[] args) {
         int arr[] = {1,4,9,3,2,-1};
-        System.out.println(solution(arr));
+        //System.out.println(solution(arr));
+        ///Collections.swap();
     }
 
-
-    public static int solution(int[] A) {
-        int size = 0;
-
-        int head = A[0];
-        int runner = head;
-        int next = A[A[0]];
-
-        while (A[runner] == -1){
-            next = A[runner];
-            runner = next;
-        }
-
-        return A[runner]+1;
-    }
 }
 

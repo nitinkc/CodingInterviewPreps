@@ -1,10 +1,12 @@
 package ArraysProblems.peob7;
 
+/*
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.Arrays;
+*/
 
-public class Sol1_BruteForceTest {
+/*public class Sol1_BruteForceTest {
 
     @Test
     public void TestCase1() {
@@ -65,5 +67,4 @@ public class Sol1_BruteForceTest {
         int[] expected = {530, 530};
         Assert.assertTrue(Arrays.equals(Sol1_BruteForce.smallestDifference(new int[]{10, 1000, 9124, 2142, 59, 24, 596, 591, 124, -123, 530}, new int[]{-1441, -124, -25, 1014, 1500, 660, 410, 245, 530}), expected));
 
-    }
-}
+    }*/

@@ -3,9 +3,9 @@ package algoEx;
 /**
  * Created by nitin on Tuesday, April/07/2020 at 9:59 PM
  */
-class Program {
+class Ex1 {
 
-        // O(n) time | O(1) space - where n is the length of the array
+    // O(n) time | O(1) space - where n is the length of the array
 
     public static boolean isMonotonic(int[] array) {
 
@@ -21,10 +21,7 @@ class Program {
                 continue;
 
             }
-​
-
-            if (breaksDirection(direction, array[i - 1], array[i])) {
-
-                return false;
-
-            }
+        }
+        return false;
+    }
+}
