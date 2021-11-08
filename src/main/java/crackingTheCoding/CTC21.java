@@ -18,13 +18,11 @@ public class CTC21 {
 
 
         LinkedList<Integer> test = removeDuplicate((LinkedList<Integer>) ll);
-
     }
 
     public static LinkedList<Integer> removeDuplicate(LinkedList<Integer> list){
 
         Iterator<Integer> itr = list.iterator();
-
         while(itr.hasNext()){
             int temp = itr.next();
 
@@ -34,11 +32,6 @@ public class CTC21 {
                 }
             }
         }
-
-
         return list;
-
     }
-
-
 }

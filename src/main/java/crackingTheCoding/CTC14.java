@@ -1,9 +1,6 @@
 package crackingTheCoding;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Nitin Chaurasia on 4/10/16 at 7:02 PM.
@@ -15,31 +12,23 @@ import java.util.Map;
 
 public class CTC14 {
     public static void main(String[] args) {
-
-        boolean result = anagramsByMaps("cinema", "iceman");//true
-        System.out.println(result);
-
-        //true
-        System.out.println(anagramsByMaps("cinema", "iceman"));
-
+        System.out.println(anagramsByMaps("cinema", "iceman"));//true
         System.out.println(anagramsBySorting("cinema", "iceman"));
-
     }
 
-    // Incomplete !!
     private static boolean anagramsBySorting(String a, String b) {
 
-        ArrayList<Character> tempA = null;
-        ArrayList<Character> tempB = null;
+        //Convert String to Char Array and then sort using Array.sort
+        char temp1[] = a.toCharArray();
+        char temp2[] = b.toCharArray();
 
-        // Assuming equal length String
-        for (int i = 0; i < a.length(); i++) {
-             tempA.add(a.charAt(i));
-             tempB.add(b.charAt(i));
-        }
+        Arrays.sort(temp1);
+        Arrays.sort(temp2);
 
-        //tempA.sort(super);
-        return false;
+        String temp11 = new String(temp1);
+        String temp21 = new String(temp2);
+
+        return temp11.equals(temp21);
     }
 
     // Keep the count of unique characters of one string in a map and
@@ -61,13 +50,8 @@ public class CTC14 {
         // Make a map of unique characters and its count
         for (int i = 0; i < a.length(); i++) {
             char currChar = a.charAt(i);
-
-            //if Map has the character increase the count else, put 1
-            if (map.containsKey(currChar)){
-                map.put(currChar, map.get(currChar) + 1);
-            } else {
-                map.put(currChar, 1);
-            }
+            fillMap(map, currChar);
+            //map.put(currChar, map.getOrDefault(currChar,0)+1);
         }
 
         for (int i = 0; i < b.length(); i++) {
@@ -95,5 +79,14 @@ public class CTC14 {
         }
 
         return true;
+    }
+
+    private static void fillMap(Map<Character, Integer> map, char currChar) {
+        //if Map has the character increase the count else, put 1
+        if (map.containsKey(currChar)){
+            map.put(currChar, map.get(currChar) + 1);
+        } else {
+            map.put(currChar, 1);
+        }
     }
 }

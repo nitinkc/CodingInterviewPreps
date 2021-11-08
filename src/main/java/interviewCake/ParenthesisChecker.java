@@ -25,6 +25,10 @@ public class ParenthesisChecker {
 
         boolean result6 = parenthesisChecker("([{}])");
         System.out.println("Result6 = " + result6);
+
+        boolean result7 = parenthesisChecker("){");
+        System.out.println("Result7 = " + result7);
+
     }
 
     public static boolean parenthesisChecker(String str) {
@@ -44,14 +48,15 @@ public class ParenthesisChecker {
                 stack.push(curr);
             } else { // pop on similar CLOSURES
                 // ALSO CHECK IF SIMILAR IS COMING OUT
-                char top = stack.peek();//top element of stack
-                //System.out.println(top);
-                if (    ((top == '(') && (curr == ')')) ||
-                        ((top == '{') && (curr == '}')) ||
-                        ((top == '[') && (curr == ']'))
-                        ) {
-                    stack.pop();
-                } else {
+                if(!stack.isEmpty()){
+                    char top = stack.peek();//top element of stack
+                    //System.out.println(top);
+                    if(((top == '(') && (curr == ')')) || ((top == '{') && (curr == '}')) || ((top == '[') && (curr == ']'))){
+                        stack.pop();
+                    }else{
+                        return false;
+                    }
+                }else {
                     return false;
                 }
             }
