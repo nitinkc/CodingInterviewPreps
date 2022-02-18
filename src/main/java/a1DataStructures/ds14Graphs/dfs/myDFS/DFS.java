@@ -6,7 +6,7 @@ import java.util.Stack;
  * Created by Nitin Chaurasia on 2/27/18 at 8:03 PM.
  */
 public class DFS {
-    private Stack<Vertex> stack = new Stack();
+    private final Stack<Vertex> stack = new Stack();
 
     public void dfs(Vertex root) {
 

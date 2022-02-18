@@ -2,7 +2,7 @@ package a1DataStructures.ds7Heap;
 
 public class Heap {
 
-	private Integer[] heap;
+	private final Integer[] heap;
 	private int currentPosition =  -1;
 	
 	public Heap(int size){

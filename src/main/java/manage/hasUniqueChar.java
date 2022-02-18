@@ -16,7 +16,7 @@ public static boolean hasUniqueCharSet(char[] input){
 }
 
 
-public static void main(String args[]) {
+public static void main(String[] args) {
 
   char[][] myInput = {
                       {'a'},

@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class BoyerMoore {
 
-	private Map<Character, Integer> mismatchShiftsTable;
-	private String text;
-	private String pattern;
+	private final Map<Character, Integer> mismatchShiftsTable;
+	private final String text;
+	private final String pattern;
 
 	public BoyerMoore(String text, String pattern) {
 		this.pattern = pattern;

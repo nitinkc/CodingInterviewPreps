@@ -14,9 +14,9 @@ public class Driver {
         System.out.println(stack.size());
         System.out.println(stack.isEmpty());
 
-        stack.push("Chaurasia");
-        stack.push("Sindhu");
-        stack.push("Ramachandra");
+        stack.push("test1");
+        stack.push("test2");
+        stack.push("test3");
         System.out.println(stack.size());
 
         System.out.println(stack.peek());

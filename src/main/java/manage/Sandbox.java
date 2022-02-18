@@ -21,10 +21,10 @@ public class Sandbox {
         if(str.substring(0,1).equalsIgnoreCase("x")){
             s = s + "y";
         }else{
-            s = s + str.substring(0,1);
+            s = s + str.charAt(0);
         }
 
-        return s + str.substring(1,str.length());
+        return s + str.substring(1);
     }
 
 }

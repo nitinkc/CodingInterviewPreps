@@ -6,7 +6,7 @@ public class SieveOfEratosthenes {
 	}
 	
 	public static void printPrime(int n){
-		boolean prime[] = new boolean[n+1];//for 0 to n numbers
+		boolean[] prime = new boolean[n+1];//for 0 to n numbers
 		for (int i =2;i<=n;i++){
 			prime[i] = true; 
 			}

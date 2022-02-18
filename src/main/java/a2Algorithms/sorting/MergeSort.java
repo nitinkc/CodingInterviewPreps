@@ -14,7 +14,7 @@ public class MergeSort {
     static final int N = 5; //defining the soze of the array
     static final int MAX = 100;
 
-    public static int A[] = new int[N]; //Array will have N elements, indexed from 0 to N-1
+    public static int[] A = new int[N]; //Array will have N elements, indexed from 0 to N-1
 
 
     public static void main(String[] args) {
@@ -52,7 +52,7 @@ public class MergeSort {
     //Merge the arrays (most crucial part)
 
     static void merge(int[] array, int low, int mid, int high) {
-        int temp[] = new int[high - low + 1];//temporary array to hold the sorted values
+        int[] temp = new int[high - low + 1];//temporary array to hold the sorted values
         int left = low;
         int right = mid + 1;
         int k = 0; //The index of temp
@@ -88,7 +88,7 @@ public class MergeSort {
     }//End Merge Sort
 
     //Print the Array.
-    public static void printArray(int B[]) {
+    public static void printArray(int[] B) {
         for (int i = 0; i < B.length; i++)//for each loop
             System.out.print(B[i] + ", ");//off by one bug (Extra Comma)
         System.out.println();

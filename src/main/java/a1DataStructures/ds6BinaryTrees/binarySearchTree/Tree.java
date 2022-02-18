@@ -1,8 +1,8 @@
 package a1DataStructures.ds6BinaryTrees.binarySearchTree;
 public interface Tree<T> {
-	public void traversal();
-	public void insert(T data);
-	public void delete(T data);
-	public T getMaxValue();
-	public T getMinValue();
+	void traversal();
+	void insert(T data);
+	void delete(T data);
+	T getMaxValue();
+	T getMinValue();
 }

@@ -4,7 +4,7 @@ public class InsertionSort {
 
     static final int N = 5; //defining the soze of the array
 
-    public static int A[] = new int[N]; //Array will have N elements, indexed from 0 to N-1
+    public static int[] A = new int[N]; //Array will have N elements, indexed from 0 to N-1
     static long lStartTime;
     static long lEndTime;
     static long executionTime;
@@ -58,7 +58,7 @@ public class InsertionSort {
     }// END INSERTION SORT
 
     //Print the Array.
-    public static void printArray(int B[]) {
+    public static void printArray(int[] B) {
         for (int i = 0; i < B.length; i++)//for each loop
             System.out.print(B[i] + ", ");//off by one bug (Extra Comma)
         System.out.println();

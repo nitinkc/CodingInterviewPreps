@@ -2,7 +2,7 @@ package a2Algorithms.sorting.quicksort;
 
 public class Quicksort {
 
-    private int[] nums;
+    private final int[] nums;
 
     public Quicksort(int[] nums) {
         this.nums = nums;

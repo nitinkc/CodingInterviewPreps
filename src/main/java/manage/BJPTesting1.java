@@ -6,8 +6,8 @@ public class BJPTesting1 {
 
     public static void main(String[] args) {
 
-        Integer a[] = new Integer[]{3, 7, 3, -1, 2, 3, 7, 2, 15, 15};
-        Integer b[] = new Integer[]{-5, 15, 2, -1, 7, 15, 36};
+        Integer[] a = new Integer[]{3, 7, 3, -1, 2, 3, 7, 2, 15, 15};
+        Integer[] b = new Integer[]{-5, 15, 2, -1, 7, 15, 36};
 
         List<Integer> l1 = new ArrayList<Integer>();
         l1.addAll(Arrays.asList(a));

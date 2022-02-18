@@ -9,7 +9,7 @@ public class BubbleSort {
 static final int N = 5; //defining the size of the array
 static final int MAX = 100;//Random numbers less than MAX
 	
-	public static int A[] = new int[N]; //Array will have N elements, indexed from 0 to N-1
+	public static int[] A = new int[N]; //Array will have N elements, indexed from 0 to N-1
 
 	public static void main(String[] args) {
 
@@ -42,7 +42,7 @@ static final int MAX = 100;//Random numbers less than MAX
 
 
 	//Print the Array.
-	public static void printArray(int B[]){
+	public static void printArray(int[] B){
 		for (int i=0;i<B.length;i++)//for each loop
 			System.out.print(B[i] + ", ");//off by one bug (Extra Comma)
 		System.out.println();

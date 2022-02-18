@@ -1,5 +1,9 @@
 package a1DataStructures.ds14Graphs.dfs;
 
+import a1DataStructures.ds14Graphs.graphUtility.DFSWithRecursion;
+import a1DataStructures.ds14Graphs.graphUtility.DFSWithStack;
+import a1DataStructures.ds14Graphs.graphUtility.Vertex;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,12 +12,25 @@ import java.util.List;
  */
 public class DriverRecursion {
     public static void main(String[] args) {
-        Vertex v1 = new Vertex("1");
-        Vertex v2 = new Vertex("2");
-        Vertex v3 = new Vertex("3");
-        Vertex v4 = new Vertex("45");
-        Vertex v5 = new Vertex("6");
-        Vertex v6 = new Vertex("7");
+        List<Vertex> list = getGraph();
+
+        // This should also return the same output.
+        DFSWithRecursion dfsWithRecursion = new DFSWithRecursion();
+        dfsWithRecursion.dfs(list);
+
+        System.out.println("***************************");
+        list = getGraph();
+        DFSWithStack dfsWithStack = new DFSWithStack();
+        dfsWithStack.dfs(list);
+    }
+
+    private static List<Vertex> getGraph() {
+        Vertex<String> v1 = new Vertex("1");
+        Vertex<String> v2 = new Vertex("2");
+        Vertex<String> v3 = new Vertex("3");
+        Vertex<String> v4 = new Vertex("45");
+        Vertex<String> v5 = new Vertex("6");
+        Vertex<String> v6 = new Vertex("7");
 
         List<Vertex> list = new ArrayList<>();
 
@@ -28,9 +45,6 @@ public class DriverRecursion {
         list.add(v4);
         list.add(v5);
         list.add(v6);
-
-        // This should also return the same output.
-        DFSWithRecursion dfsWithRecursion = new DFSWithRecursion();
-        dfsWithRecursion.dfs(list);
+        return list;
     }
 }

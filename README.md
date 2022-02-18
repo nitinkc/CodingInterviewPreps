@@ -36,3 +36,10 @@ Here in this book I am not covering anything that is tangential from the Coding 
     - Rabin-Karp
   - Strings
   - Data Compression Algorithms
+
+
+[/src/main/java/algoEx/MonotonousArray.md](/src/main/java/algoEx/MonotonousArray.md)
+
+[/src/main/java/a1DataStructures/bigOh/readMe.md](/src/main/java/a1DataStructures/bigOh/readMe.md)
+
+[/src/main/java/a1DataStructures/ds14Graphs/readMe.md](/src/main/java/a1DataStructures/ds14Graphs/readMe.md)

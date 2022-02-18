@@ -4,7 +4,7 @@ package a2Algorithms.sorting.merge.nitin;
  * Created by nitinc on 3/18/2015.
  */
 public class Merge {
-    public static void main(String args[]){
+    public static void main(String[] args){
         int[] a = {2,4,6,7};
         int[] b = {1,3,5,8};
 

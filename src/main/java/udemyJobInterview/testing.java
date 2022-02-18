@@ -4,13 +4,13 @@ package udemyJobInterview;
  * Created by Nitin Chaurasia on 3/8/17 at 8:53 PM.
  */
 public class testing {
-    private static int count;
+    private static final int count;
     static {
         System.out.println("In block 1");
         count = 10;
     }
 
-    private int[] data;
+    private final int[] data;
     {
         System.out.println("In block 2");
         data = new int[count];

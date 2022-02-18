@@ -20,7 +20,7 @@ public class Solution {
         String last10 = "";
         
         for (int i = 1; i <= 10; i++){
-            last10 = last10 + sum.mod(BigInteger.TEN).toString();
+            last10 = last10 + sum.mod(BigInteger.TEN);
             sum = sum.divide(BigInteger.TEN); 
         }
 

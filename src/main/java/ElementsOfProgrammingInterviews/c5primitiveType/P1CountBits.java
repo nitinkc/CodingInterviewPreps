@@ -9,8 +9,11 @@ package ElementsOfProgrammingInterviews.c5primitiveType;
  */
 public class P1CountBits {
 
+    public static void main(String[] args) {
+        System.out.println(countBits(6));
+    }
 
-    public short countBits(int x){
+    public static short countBits(int x){
         short numBits = 0;//16 bit number
 
         while (x != 0){

@@ -5,8 +5,8 @@ import java.util.Stack;
 
 public class Algorithm {
 
-	private Stack<String> operationStack;
-	private Stack<Double> valueStack;
+	private final Stack<String> operationStack;
+	private final Stack<Double> valueStack;
 	
 	public Algorithm(){
 		this.operationStack = new Stack<>();

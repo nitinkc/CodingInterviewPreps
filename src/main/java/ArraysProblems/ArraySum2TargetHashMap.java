@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ArraySum2TargetHashMap {
     public static void main(String[] args) {
-        int a[] = new int[]{3, 5, -4, 8, 11, 1, -1, 6};
+        int[] a = new int[]{3, 5, -4, 8, 11, 1, -1, 6};
         int target = 10;
 
         twoNumberSum(a,target);

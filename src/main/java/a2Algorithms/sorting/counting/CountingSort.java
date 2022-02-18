@@ -2,7 +2,7 @@ package a2Algorithms.sorting.counting;
 
 public class CountingSort {
 
-	private int[] nums;
+	private final int[] nums;
 	
 	public CountingSort(int[] nums) {
 		this.nums = nums;

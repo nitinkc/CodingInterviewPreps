@@ -19,27 +19,21 @@ public class Prob1 {
 		//all the multiples of 3
 		for (i=1;i<=333;i++){
 			mulOf3 = mulOf3 +3;
-			System.out.println(mulOf3);
 			sum3 = sum3 + mulOf3;
-			System.out.println(sum3);
 		}
 		
 		//all the multiples of 5
 		for (j=1;j<200;j++){
 			mulOf5 = mulOf5 + 5;
-			System.out.println(mulOf5);
 			sum5 = sum5 + mulOf5;
-			System.out.println(sum5);
 		}
 		
 		for (k=1;k<=66;k++){
 			mulOf15 = mulOf15 + 15;
-			System.out.println(mulOf15);
 			sum15 = sum15 + mulOf15;
-			System.out.println(sum15);
 		}
 	finalSum = sum3 + sum5 - sum15;
-	System.out.println(finalSum);
+	System.out.println("finalSum : " + finalSum);
 	System.out.println(sum3);
 	System.out.println(sum5);
 	System.out.println(sum15);

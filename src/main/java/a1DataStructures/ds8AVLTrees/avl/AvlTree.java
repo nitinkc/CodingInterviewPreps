@@ -46,7 +46,7 @@ public class AvlTree implements Tree {
 		} else {  // we have found the node we want to remove !!!
 
 			if (node.getLeftNode() == null && node.getRightNode() == null) {
-				System.out.println("Removing a leaf node...");
+				System.out.println("Removing a leaf node..." + node.getData());
 				return null;
 			}
 
@@ -214,7 +214,7 @@ public class AvlTree implements Tree {
 		if (node.getLeftNode() != null)
 			inOrderTraversal(node.getLeftNode());
 
-		System.out.println(node);
+		System.out.print(node + " ");
 
 		if (node.getRightNode() != null)
 			inOrderTraversal(node.getRightNode());

@@ -7,7 +7,7 @@ import java.util.EmptyStackException;
  */
 public class ArrayStack implements Stack{
 
-    private Object[] elements;
+    private final Object[] elements;
     private static final int INITIAL_CAPACITY = 100;
     private int size;
 

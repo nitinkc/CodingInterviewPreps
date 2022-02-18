@@ -10,7 +10,7 @@ class LargestNumberTest {
     LargestNumber largestNumber = new LargestNumber();
     @Test
     void largestNumber() {
-        int input[] = new int[]{10,2};
+        int[] input = new int[]{10,2};
         String expected = "210";
 
         var actual = largestNumber.largestNumber(input);

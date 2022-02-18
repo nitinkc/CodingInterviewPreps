@@ -2,8 +2,8 @@ package a2Algorithms.sorting.merge;
 
 public class MergeSort {
 
-    private int[] nums;
-    private int[] tempArray;
+    private final int[] nums;
+    private final int[] tempArray;
 
     public MergeSort(int[] nums) {
         this.nums = nums;

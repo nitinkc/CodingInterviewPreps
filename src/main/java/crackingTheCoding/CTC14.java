@@ -19,8 +19,8 @@ public class CTC14 {
     private static boolean anagramsBySorting(String a, String b) {
 
         //Convert String to Char Array and then sort using Array.sort
-        char temp1[] = a.toCharArray();
-        char temp2[] = b.toCharArray();
+        char[] temp1 = a.toCharArray();
+        char[] temp2 = b.toCharArray();
 
         Arrays.sort(temp1);
         Arrays.sort(temp2);

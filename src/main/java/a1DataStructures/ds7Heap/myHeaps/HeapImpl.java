@@ -10,7 +10,7 @@ package a1DataStructures.ds7Heap.myHeaps;
  */
 public class HeapImpl implements IHeap{
 
-    private Integer heap[];
+    private final Integer[] heap;
     private int currentIndex = -1;
 
     public HeapImpl(int size){
@@ -113,9 +113,6 @@ public class HeapImpl implements IHeap{
 
     @Override
     public boolean isFull() {
-        if(currentIndex == heap.length - 1)
-            return true;
-        else
-            return false;
+        return currentIndex == heap.length - 1;
     }
 }

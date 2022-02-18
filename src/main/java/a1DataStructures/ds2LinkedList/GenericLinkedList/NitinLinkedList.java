@@ -5,53 +5,53 @@ package a1DataStructures.ds2LinkedList.GenericLinkedList;
  */
 public interface NitinLinkedList {
 
-    public void add(int index, Object element);
+    void add(int index, Object element);
 
     /* Add an element in the beginning of the List */
-    public void addFirst(Object o);
+    void addFirst(Object o);
 
     /* Add an element to the end of the list */
-    public void addLast(Object o);
+    void addLast(Object o);
 
     /* Deleting the entire List */
-    public void clear();
+    void clear();
 
     /* Checks if a particular element exists or not*/
-    public boolean contains(Object o);
+    boolean contains(Object o);
 
     /* Getting the element from a particular index */
-    public Object get(int index);
+    Object get(int index);
 
     /* Getting the first element */
-    public Object getFirst();
+    Object getFirst();
 
     /* Getting the last element of the list*/
-    public Object getLast();
+    Object getLast();
 
     /* Deleting the entire List*/
-    public int indexOf(Object o);
+    int indexOf(Object o);
 
     /* Getting the last index of the List */
-    public int lastIndexOf(Object o);
+    int lastIndexOf(Object o);
 
     /* Remove a particular element at Index */
-    public Object remove(int index);
+    Object remove(int index);
 
     /* Deleting the entire List*/
-    public boolean remove(Object o);
+    boolean remove(Object o);
 
     /* Deleting the entire List*/
-    public Object removeFirst() ;
+    Object removeFirst() ;
 
     /* Deleting the entire List*/
-    public Object removeLast();
+    Object removeLast();
 
     /* Deleting the entire List*/
-    public Object set(int index, Object element);
+    Object set(int index, Object element);
 
     /* Returns the size of the Linked List */
-    public int size();
+    int size();
 
     /* Looking into the entire list */
-    public void peek();
+    void peek();
 }

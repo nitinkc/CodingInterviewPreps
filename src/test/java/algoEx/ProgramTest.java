@@ -3,8 +3,6 @@ package algoEx;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ProgramTest {
 
     // Add, edit, or remove tests in this file.

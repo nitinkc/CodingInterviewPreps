@@ -11,6 +11,7 @@ public class App {
 		avl.insert(5);
 		avl.insert(6);
 
+		avl.traverse();
 		avl.delete(15);
 		
 		avl.traverse();

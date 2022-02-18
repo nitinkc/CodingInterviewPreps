@@ -7,7 +7,7 @@ public class ds2MultiDimentionalArray {
     public static void main(String[] args) {
 
         // Declaring a Rectangular Matrix
-        String arr[][] = new String[6][7];
+        String[][] arr = new String[6][7];
         int row = arr.length;// Row = 6
         int col = arr[0].length; // Columns = 7
 
@@ -21,7 +21,7 @@ public class ds2MultiDimentionalArray {
         }
 
         //For Each loop for Multi dimensional Array
-        for (String a[] : arr) {
+        for (String[] a : arr) {
             for (String b : a) {
                 System.out.print(b + "\t");
             }
@@ -29,7 +29,7 @@ public class ds2MultiDimentionalArray {
         }
 
         //Declaring a 3X3 Square matrix
-        String arr2[][] = new String[3][3];
+        String[][] arr2 = new String[3][3];
         for (int i = 0; i < arr2[0].length; i++) {
             for (int j = 0; j < arr2[i].length; j++) {
                 arr2[i][j] = "-" + i + "_" + j;
@@ -37,7 +37,7 @@ public class ds2MultiDimentionalArray {
         }
 
         //For Each loop for Multi dimensional Array
-        for (String a1[] : arr2) {
+        for (String[] a1 : arr2) {
             for (String b : a1) {
                 System.out.print(b + "\t");
             }

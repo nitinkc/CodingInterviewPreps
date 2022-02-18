@@ -10,7 +10,9 @@ public class Prob5 {
 	 */
 	public static void main(String[] args) {
 		//manually 2 2 2 2 3 3 5 7 11 13 17 19 will solve the case (LCM of 1,2....20)
-		int val = 16*9*5*7*11*13*17*19;
+		//int val = 16*9*5*7*11*13*17*19;
+		int val = 2*3*5*7*11*13*17*19;
+
 		System.out.println(val);
 
 	}

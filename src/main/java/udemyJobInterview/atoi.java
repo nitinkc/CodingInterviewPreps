@@ -19,7 +19,7 @@ public class atoi {
 
             if (val >= 0 && val <= 9) {
                 int placevalue = str.length() - i - 1;
-                ret = (int) (ret + (val * Math.pow((double) 10, (double) placevalue)));
+                ret = (int) (ret + (val * Math.pow(10, placevalue)));
             } else {
                 throw new RuntimeException("Not a number:" + str.charAt(i));
             }

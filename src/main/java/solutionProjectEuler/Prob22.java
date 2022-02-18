@@ -15,64 +15,60 @@ package solutionProjectEuler;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.math.BigInteger;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Prob22 {
+
+	static Map<Character, Integer> map = new HashMap<>();
+
 	public static void main(String[] args) {
-		
 		String str = null;
-		
-		File myFile = new File("p022_names.txt");
+		int i=1;
+		for(char ch = 'A'; ch <= 'Z'; ch++){// fills alphabet array with the alphabet
+			map.put(ch,i++);
+		}
+		File myFile = new File("src/main/java/solutionProjectEuler/p022_names.txt");
 		Scanner inputFile = null;
 		try {
 			inputFile = new Scanner(myFile);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		int i=0;
-		
+
 		// Read  line from the file.
 		//Keep the file outside the src folder.
 		while (inputFile.hasNext()){//Reading the entile file as one line
-		 str = inputFile.nextLine();
-		 i++;
-		 System.out.println(str);
+			str = inputFile.nextLine();
 		}
-		System.out.println(i);
-			
 		//Close File
 		inputFile.close();
-		
+
 		//Spliting the String into Tokens using regular Expression
 		String delims = "[\" ,]+";//"Nitin", is Split into Nitin
 		String[] tokens = str.split(delims);
-		
-		//Reading the tokens
-		for (i = 0; i < tokens.length; i++)
-		    System.out.print(tokens[i]+" ");
-		
+
 		//Sorting the Array
 		Arrays.sort(tokens);
-		System.out.println();
-		for (i = 0; i < tokens.length; i++)
-		    System.out.print(tokens[i]+" ");
-		
-		int tmp = wordWeight(tokens[1]);
+		Integer bgi = 0;
+		//Reading the tokens
+		for (i = 0; i < tokens.length; i++){
+			bgi = bgi + (i)*wordWeight(tokens[i]);
 		}
-	
+
+		System.out.println(bgi);//Right answer 871198282
+
+		}
+
 	public static int wordWeight(String word){
 		int weight=0;
-		System.out.println();
-		char[] alphabet = new char[26]; // new array
-        for(char ch = 'A'; ch <= 'Z'; ++ch)// fills alphabet array with the alphabet
-        {
-            alphabet[ch-'A']=ch;
-        } 
-            
-           System.out.print(alphabet);// output the Alphabet Array
+		char[] alphabet = word.toCharArray(); // new array
+        for (int i= 0; i < alphabet.length; i++){
+			weight = weight+map.get(alphabet[i]);
+		}
 		return weight;
 	}
 }

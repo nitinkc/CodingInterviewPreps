@@ -1,22 +1,24 @@
 package a1DataStructures.ds14Graphs.bfs.myBFS;
 
- /**
+import a1DataStructures.ds14Graphs.graphUtility.Vertex;
+
+/**
  * Created by Nitin Chaurasia on 2/27/18 at 7:48 PM.
  */
 public class MyBFSdriver {
     public static void main(String[] args) {
-        BFS bfs = new BFS();
+        BFS<String> bfs = new BFS();
 
-        Vertex vertex0 = new Vertex("SP");
-        Vertex vertex1 = new Vertex("Rama");
-        Vertex vertex2 = new Vertex("Nitin");
-        Vertex vertex3 = new Vertex("Kirti");
-        Vertex vertex4 = new Vertex("Nidhi");
-        Vertex vertex5 = new Vertex("Nishu");
-        Vertex vertex6 = new Vertex("Varun");
-        Vertex vertex7 = new Vertex("Kunal");
-        Vertex vertex8 = new Vertex("Sai");
-        Vertex vertex9 = new Vertex("Shubh");
+        Vertex<String> vertex0 = new Vertex("SP");
+        Vertex<String> vertex1 = new Vertex("Rama");
+        Vertex<String> vertex2 = new Vertex("Nitin");
+        Vertex<String> vertex3 = new Vertex("Kirti");
+        Vertex<String> vertex4 = new Vertex("Nidhi");
+        Vertex<String> vertex5 = new Vertex("Nishu");
+        Vertex<String> vertex6 = new Vertex("Varun");
+        Vertex<String> vertex7 = new Vertex("Kunal");
+        Vertex<String> vertex8 = new Vertex("Sai");
+        Vertex<String> vertex9 = new Vertex("Shubh");
 
         vertex0.addNeighbour(vertex2);
         vertex0.addNeighbour(vertex1);

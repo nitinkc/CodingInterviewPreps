@@ -4,7 +4,7 @@ package manage;
  * Created by nitinc on 3/13/2015.
  */
 public class RotateArray {
-    public static void main(String args[]){
+    public static void main(String[] args){
         int[][] mat = {{1,2,3},{4,5,6},{7,8,9}};
         rotatedArray(mat, 5);
     }
@@ -17,7 +17,7 @@ public class RotateArray {
                 System.out.print(i + "" + j + "    ");
             }
             System.out.println();
-        };
+        }
 
         /*
         Beginning with a square matrix of size 1 and then 2 and then 3, the pattern that was observed

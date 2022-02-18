@@ -10,7 +10,7 @@ package manage;
 public class Test {
 
     public static void main(String[] args) {
-        int arr[] = {1,4,9,3,2,-1};
+        int[] arr = {1,4,9,3,2,-1};
         //System.out.println(solution(arr));
         ///Collections.swap();
     }

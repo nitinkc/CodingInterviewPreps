@@ -2,7 +2,7 @@ package a1DataStructures.ds5Maps.HashMapLinearProbing;
 
 public class HashTable {
 
-	private HashItem[] hashTable;
+	private final HashItem[] hashTable;
 	
 	public HashTable() {
 		this.hashTable = new HashItem[Constants.TABLE_SIZE];

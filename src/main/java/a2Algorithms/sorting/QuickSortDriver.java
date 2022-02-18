@@ -6,7 +6,7 @@ package a2Algorithms.sorting;
 public class QuickSortDriver {
 
     /* Global Variables*/
-    static int A[] = new int[5]; //Array will have N elements, indexed from 0 to N-1
+    static int[] A = new int[5]; //Array will have N elements, indexed from 0 to N-1
     static String fileName;//holds the name of the file
     final static String RESULTS = "Results.log";
     static int n;//Size of the array
@@ -30,7 +30,7 @@ public class QuickSortDriver {
         System.out.println("Total comparisions made : " + compareCount);
     }
 
-    public static void quickSort(int A[], int p, int r) {
+    public static void quickSort(int[] A, int p, int r) {
         int q;
         if (p < r) {
             q = partition(A, p, r);
@@ -39,7 +39,7 @@ public class QuickSortDriver {
         }
     }
 
-    public static int partition(int A[], int p, int r) {
+    public static int partition(int[] A, int p, int r) {
         int x = A[r];//The last element becomes the pivot
         int i = p - 1;//iterate through the first
         int exchange;
@@ -59,7 +59,7 @@ public class QuickSortDriver {
     }
 
     //Print the Array.
-    public static void printArray(int B[]) {
+    public static void printArray(int[] B) {
         for (int i = 0; i < B.length; i++)//for each loop
             System.out.print(B[i] + ", ");//off by one bug (Extra Comma)
         System.out.println();

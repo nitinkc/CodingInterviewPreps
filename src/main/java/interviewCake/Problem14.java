@@ -1,4 +1,4 @@
-package main.java.interviewCake;
+package interviewCake;
 
 /**
  * Created by nitin on 2/25/15.

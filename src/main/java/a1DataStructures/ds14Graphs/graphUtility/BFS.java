@@ -1,4 +1,6 @@
-package a1DataStructures.ds14Graphs.bfs;
+package a1DataStructures.ds14Graphs.graphUtility;
+
+import a1DataStructures.ds14Graphs.graphUtility.Vertex;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -6,9 +8,9 @@ import java.util.Queue;
 /**
  * Created by Nitin Chaurasia on 2/6/17 at 12:04 AM.
  */
-public class BFS {
+public class BFS<T> {
 
-    public void bfs(Vertex root){
+    public void bfs(Vertex<T> root){
 
         // Linked List Implementation of Queue
         Queue<Vertex> queue = new LinkedList<>();
@@ -17,10 +19,10 @@ public class BFS {
         root.setVisited(true);
 
         while(!queue.isEmpty()){
-            Vertex currentVertex = queue.remove();
-            System.out.println(currentVertex + " ");//using toSrting
+            Vertex<T> currentVertex = queue.remove();
+            System.out.print(currentVertex + " ");//using toSrting
 
-            for(Vertex v : currentVertex.getNeighbourList()){
+            for(Vertex<T> v : currentVertex.getNeighbours()){
                 if(!v.isVisited()){
                     v.setVisited(true);
                     queue.add(v);

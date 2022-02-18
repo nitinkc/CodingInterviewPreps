@@ -8,7 +8,7 @@ import java.util.Set;
  */
 public class LinkedListOperations {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         LinkedListOperations listOperations = new LinkedListOperations();
         int[] arr = {1,1,2,2,3,4,5,1,7,8,10,1,3,2};
         Node head = listOperations.createListFromArray(arr);

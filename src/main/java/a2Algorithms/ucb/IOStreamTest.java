@@ -8,15 +8,14 @@ public class IOStreamTest {
 
 	public static void main(String[] args) throws Exception {
 		
-		URL u = new URL("http://www.narendramodi.in/humble-beginnings-the-early-years/");
+		URL u = new URL("https://www.narendramodi.in/humble-beginnings-the-early-years-3131");
 //		InputStream ins = u.openStream();
 //		InputStreamReader isr = new InputStreamReader(ins);
 //		BufferedReader br = new BufferedReader(isr);
 		BufferedReader br = new BufferedReader(new InputStreamReader(u.openStream()));
-		
-		for(int i=0;i<10;i++)
 		System.out.println(br.readLine());
 
+		br.close();
 	}
 
 }

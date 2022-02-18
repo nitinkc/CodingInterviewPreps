@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Trie {
 
-	private Node root;
+	private final Node root;
 	private int indexOfSingleChild;
 
 	public Trie() {
@@ -77,7 +77,7 @@ public class Trie {
 		
 		while( countNumOfChildren(trieNode) == 1 && !trieNode.isLeaf() ) {
 			trieNode = trieNode.getChild(indexOfSingleChild);
-			lcp = lcp + String.valueOf((char) (indexOfSingleChild+'a'));
+			lcp = lcp + (char) (indexOfSingleChild + 'a');
 		}
 		
 		return lcp;

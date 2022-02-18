@@ -8,7 +8,7 @@ package leetCode.arrays;
 public class LargestNumber {
     public String largestNumber(int[] nums) {
         //Placeholder array: index = number, value = repeatition
-        int arr[] = new int[10];
+        int[] arr = new int[10];
 
         for(int i=0;i<nums.length;i++){
             int currentNum = nums[i];
@@ -27,7 +27,7 @@ public class LargestNumber {
         String ret = "";
         for(int i=arr.length-1;i>=0;i--){
             for(int j=1;j<=arr[i];j++){
-                ret = ret+String.valueOf(i);
+                ret = ret+ i;
             }
         }
         return ret;

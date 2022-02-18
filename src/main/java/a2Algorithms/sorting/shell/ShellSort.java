@@ -2,7 +2,7 @@ package a2Algorithms.sorting.shell;
 
 public class ShellSort {
 
-    private int[] array;
+    private final int[] array;
 
     public ShellSort(int[] array) {
         this.array = array;

@@ -13,7 +13,7 @@ public class TwoSum {
         // HashMap containing value and its index
         Map<Integer,Integer> map = new HashMap<>();
         int diff = -1;
-        int ret[] = new int[2];
+        int[] ret = new int[2];
 
         for(int i = 0;i<nums.length;i++){
             diff = target - nums[i];

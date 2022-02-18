@@ -5,7 +5,7 @@ import java.util.Random;
 public class Main1 {
 
     public static void main(String[] args) {
-        int a[] = generateRandomArrayOneD();
+        int[] a = generateRandomArrayOneD();
         for (int i = 0; i < a.length; i++)
             System.out.print(a[i] + ",");
         System.out.println();
@@ -18,7 +18,7 @@ public class Main1 {
 
 
     static int[] function(int[] a) {
-        int b[] = new int[a.length];
+        int[] b = new int[a.length];
         int count = 0;
         for (int i = 0; i < a.length; i++) {//parameter in array and method in string
             if (a[i] == 0)

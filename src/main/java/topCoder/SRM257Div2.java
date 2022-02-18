@@ -7,7 +7,7 @@ package topCoder;
  */
 public class SRM257Div2 {
 
-    public static void main(String arg[]) {
+    public static void main(String[] arg) {
         System.out.println(getValue("TRADINGFEW", "LGXWEV"));
     }
 

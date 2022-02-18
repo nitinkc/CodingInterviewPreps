@@ -20,7 +20,7 @@ public class HumanDriver {
 		b.copyHuman(c);
 		b.introduce();
 		
-		Human d = new Human("Sindhu R");
+		Human d = new Human("Test S");
 		d.introduce();
 		
 		//Human.noOfHumans

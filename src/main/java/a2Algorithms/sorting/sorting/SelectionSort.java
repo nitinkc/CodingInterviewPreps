@@ -4,7 +4,7 @@ public class SelectionSort {
 
 	public static void main(String[] args) {
 
-		int nums[] = { 1, 56, 32, 45, 89, 76 };
+		int[] nums = { 1, 56, 32, 45, 89, 76 };
 
 		for (int i = 0; i < nums.length - 1; ++i) {
 			
