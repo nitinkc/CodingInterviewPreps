@@ -14,14 +14,10 @@ import java.util.Scanner;
  *
  */
 public class BinarySearchDriver {
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 				
 		BST bst = new BST();
-		File file = new File("src/a1DataStructures/ds6BinaryTrees/myTree/data.txt");
+		File file = new File("src/main/java/a1DataStructures/ds6BinaryTrees/data.txt");
 		Scanner inputFile = null;
 		try {
 			inputFile = new Scanner(file);

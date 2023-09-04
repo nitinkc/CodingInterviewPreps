@@ -13,6 +13,10 @@ public class testing {
     private final int[] data;
     {
         System.out.println("In block 2");
+        String str = "Nitin";
+        str.length();
+        int left =0, right = 0;
+        left++; right--;
         data = new int[count];
         for (int i = 0; i < count; i++) {
             data[i] = i;
