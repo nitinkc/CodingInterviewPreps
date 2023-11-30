@@ -1,4 +1,4 @@
-package bitwise;
+package a0bitwise;
 
 public class NumOfDigits {
     public static void main(String[] args) {

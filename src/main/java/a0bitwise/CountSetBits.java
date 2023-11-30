@@ -1,21 +1,21 @@
-package bitwise;
+package a0bitwise;
 
 public class CountSetBits {
     public static void main(String[] args) {
-        System.out.println(countBits(0b1100011));
+        System.out.println(countSetBitsCondensed(0b1100011));
 
         System.out.println(countOnes(0b1100011));
     }
 
-    private static short countBits(int x){
-        short numBits = 0;
+    private static short countSetBitsCondensed(int x){
+        short numSetBits = 0;
 
         while(x != 0){
-            numBits += (x & 1);
-
+            numSetBits += (x & 1);
             x >>>= 1;
+            //System.out.println(x);
         }
-        return numBits;
+        return numSetBits;
     }
 
     public static int countOnes(int x) {

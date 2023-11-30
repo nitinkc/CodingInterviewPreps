@@ -1,4 +1,4 @@
-package bitwise;
+package a0bitwise;
 
 public class CountZeroes {
     public static void main(String[] args) {
