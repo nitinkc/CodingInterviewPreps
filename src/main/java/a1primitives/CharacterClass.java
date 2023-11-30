@@ -9,6 +9,9 @@ public class CharacterClass {
         System.out.println(intValueOfChar);
 
         //Same can be achieved through the library method
-        System.out.println(Character.getNumericValue(c));
+        System.out.println(Character.getNumericValue('A'));//Gets unicode character
+
+        System.out.println(Character.getNumericValue('a'));//Gets unicode character
+
     }
 }
