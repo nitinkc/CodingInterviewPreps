@@ -1,4 +1,4 @@
-package ElementsOfProgrammingInterviews.c5primitiveType;
+package a0bitwise;
 
 /**
  * Created by Nitin Chaurasia on 2/12/17 at 11:07 PM.
