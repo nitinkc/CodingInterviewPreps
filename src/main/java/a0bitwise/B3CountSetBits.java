@@ -1,6 +1,6 @@
 package a0bitwise;
 
-public class CountSetBits {
+public class B3CountSetBits {
     public static void main(String[] args) {
         System.out.println(countSetBitsCondensed(0b1100011));
 

@@ -1,6 +1,6 @@
 package a0bitwise;
 
-public class BitwiseOperatorsExample {
+public class B0BitwiseOperatorsExample {
 
     public static void main(String[] args) {
         int x = -8;
@@ -14,7 +14,7 @@ public class BitwiseOperatorsExample {
         x = unsignedRightShift(x);
         x = bitwiseANDWith3(x);
         x = bitwiseORWith5(x);
-        x = bitwiseXORWith12(x);
+        x = bitwiseXOR(x);
         x = bitwiseNOT(x);
     }
 
@@ -58,7 +58,7 @@ public class BitwiseOperatorsExample {
         return value;
     }
 
-    private static int bitwiseXORWith12(int value) {
+    private static int bitwiseXOR(int value) {
         // Bitwise XOR
         value = value ^ 12;
         System.out.println("\nAfter Bitwise XOR with 12: " + value);

@@ -1,6 +1,6 @@
 package a0bitwise;
 
-public class CountZeroes {
+public class B2CountZeroes {
     public static void main(String[] args) {
         int x = 235;//11101011
         int count = countZeroes(x);

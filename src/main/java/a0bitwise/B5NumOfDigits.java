@@ -1,6 +1,6 @@
 package a0bitwise;
 
-public class NumOfDigits {
+public class B5NumOfDigits {
     public static void main(String[] args) {
         int num = 1234567890;
         int numberOfDigits = (int) Math.floor(Math.log10(num)) + 1;
