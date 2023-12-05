@@ -1,4 +1,4 @@
-package interviewCake;
+package manage.interviewCake;
 
 import java.util.Stack;
 

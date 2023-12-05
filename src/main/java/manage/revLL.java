@@ -1,4 +1,4 @@
-package udemyJobInterview;
+package manage;
 
 import java.util.LinkedList;
 import java.util.Stack;

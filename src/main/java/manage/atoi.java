@@ -1,4 +1,4 @@
-package udemyJobInterview;
+package manage;
 
 /**
  * Created by Nitin Chaurasia on 10/26/15 at 8:42 AM.
@@ -13,17 +13,19 @@ public class atoi {
         if (str == null || str.length() == 0)
             throw new RuntimeException("Empty/Null string:" + str);
 
-        long ret = 0;
+        long digits = 0;
         for (int i = 0; i < str.length(); i++) {
-            int val = str.charAt(i) - '0';
+            //int val = str.charAt(i) - '0';
+            int val = Character.getNumericValue(str.charAt(i));
 
             if (val >= 0 && val <= 9) {
                 int placevalue = str.length() - i - 1;
-                ret = (int) (ret + (val * Math.pow(10, placevalue)));
+                //digits = (int) (digits + (val * Math.pow(10, placevalue)));
+                digits = digits*10 + val;
             } else {
-                throw new RuntimeException("Not a number:" + str.charAt(i));
+                throw new NumberFormatException("Not a number:" + str.charAt(i));
             }
         }
-        return ret;
+        return digits;
     }
 }

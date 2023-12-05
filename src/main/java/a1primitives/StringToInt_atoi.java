@@ -1,6 +1,6 @@
 package a1primitives;
 
-public class StringToInt {
+public class StringToInt_atoi {
     public static void main(String[] args) {
         String str = "1$2345!";
 

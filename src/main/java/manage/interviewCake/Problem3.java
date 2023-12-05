@@ -1,4 +1,4 @@
-package interviewCake;
+package manage.interviewCake;
 
 /**
  * Created by nitin on 2/17/15.

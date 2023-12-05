@@ -1,4 +1,4 @@
-package udemyJobInterview;
+package manage;
 
 import java.util.ArrayList;
 import java.util.List;
