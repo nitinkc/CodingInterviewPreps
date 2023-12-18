@@ -1,7 +1,6 @@
 package a2utilities;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ArraysUtilityClass {
     public static void main(String[] args) {

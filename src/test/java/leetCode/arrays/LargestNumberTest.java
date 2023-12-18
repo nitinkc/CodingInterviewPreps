@@ -3,8 +3,6 @@ package leetCode.arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class LargestNumberTest {
 
     LargestNumber largestNumber = new LargestNumber();

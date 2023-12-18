@@ -1,6 +1,7 @@
 package a3DataStructures.ds14Graphs.adjacencyListRepresentation;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Iterator;
 import java.util.List;
