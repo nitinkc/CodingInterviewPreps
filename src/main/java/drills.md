@@ -9,6 +9,8 @@ int[] a = new int[] {1,2,3};
 // Same as above
 int[] b = {1,2,3};
 ```
+`a.length` is a field in array
+
 - Declare an ArrayList using `Arrays.asList()`
 ```java
 List<String> list = Arrays.asList("str1","str2");
@@ -27,14 +29,6 @@ for (int i = 0; i < arr[0].length; i++) {
 }
 ```
 
-# Arrays Class
-
-```java
-int intArray[] = {4,5,3,8,2,71};
-Arrays.sort(intArray);
-Arrays.sort(integerArray, Comparator.reverseOrder());//Reverse sorting
-```
-
 # Maps
 
 ```java
@@ -42,13 +36,13 @@ map.containsKey(key) /* returns true if the key is in the map, false otherwise.*
 map.containsValue(value)
 ```
 
-getOrDefault
+- getOrDefault
 ```java
 for (String str: list) {
     map.put(str, map.getOrDefault(str,0) + 1);//count number of occurances
 }
 ```
-
+- traditional
 ```java
 for (String str: namesList) {
     if(treeMap.containsKey(str))
@@ -84,6 +78,7 @@ while (itr.hasNext()){
 }
 ```
 
+- map forEach - Takes in a BiConsumer (key,value)
 ```java
 treeMap.forEach((name, length) -> System.out.println(name + ": " + length));
 ```
@@ -103,3 +98,83 @@ for (String name : namesList) {
 }
 ```
 
+# Integer
+
+```java
+Integer fromPrimitiveInt = Integer.valueOf(12);
+Integer fromString = Integer.valueOf("123");//NOT NULL SAFE
+Double fromPrimitiveInt = Double.valueOf(12.36);//From String or primitive to Wrapper
+Double fromString = Double.valueOf("90.25");
+```
+
+### to primitive Ints
+
+```java
+//To Primitive Ints
+int i = Integer.parseInt("12345");//Parses strings into primitive int; From String to primitive
+int j = Integer.valueOf("1234").intValue();//From String or primitive to Wrapper
+int k =  Integer.valueOf(23).intValue();
+
+double i = Double.parseDouble("12345");//Parses strings into primitive int; From String to primitive
+double j = Double.valueOf("1234").doubleValue();//From String or primitive to Wrapper
+double k = Double.valueOf(23);
+```
+
+# Character
+
+```java
+Character d = Character.valueOf('c');//From primitive to Wrapper
+        
+char myChar = 'a';
+int asciiValue = (int) myChar;
+System.out.println("From type Casting "+asciiValue);
+
+        
+// Same can be achieved through the library method
+//Returns unicode for characters from 10 to 35
+System.out.println(Character.getNumericValue('A'));//DO NOT USE THIS
+System.out.println(Character.getNumericValue(myChar));
+System.out.println(Character.getNumericValue('1'));
+
+System.out.println(Character.isLetter('r'));
+System.out.println(Character.isDigit('4'));
+System.out.println(!Character.isLetterOrDigit('!'));//punctuation mark
+        
+System.out.println(Character.compare('1','1'));//Compare character
+```
+
+# String
+
+# Sorting
+
+### Arrays Class
+`Arrays.sort(arr)` returns void
+```java
+int intArray[] = {4,5,3,8,2,71};
+Arrays.sort(intArray);//Default Natural Sorting Order
+Arrays.sort(integerArray, Comparator.reverseOrder());//Reverse sorting
+```
+### List
+
+```java
+List<Integer> list = Arrays.asList(4,5,3,8,2,71);
+list.sort(Comparator.naturalOrder());
+list.sort(Comparator.reverseOrder());
+System.out.println("List Sort " + list);
+
+List<String> stringList = Arrays.asList("apple", "banana", "orange");
+stringList.sort(Comparator.comparing(String::length).reversed());
+```
+
+### Collections sort
+```java
+List<Integer> integerListWithNull = Arrays.asList(5, 6, null, 71, 2, 3);
+Collections.sort(integerListWithNull, Comparator.nullsLast(Comparator.naturalOrder()));
+
+Collections.sort(integerListWithoutNull, Collections.reverseOrder());
+
+List<String> stringList = Arrays.asList("apple","banana", "orange");
+Collections.sort(stringList, Comparator
+    .comparing(String::length)
+    .thenComparing(Comparator.reverseOrder()));
+```
