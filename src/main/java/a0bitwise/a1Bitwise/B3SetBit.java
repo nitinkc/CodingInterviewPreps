@@ -3,19 +3,12 @@ package a0bitwise.a1Bitwise;
 public class B3SetBit {
     public static void main(String[] args) {
         int y = 0b10101000;
-
         /*
-         6712
-        - 0099
-        ---------
-            13
-
-
-         000100
-        - 000111
-        -----------
-                 1
-         */
+          6712               000100 //Binary
+        - 0099             - 000111
+        ---------           -----------
+          6613                    1
+       */
         int setBitTest = (y & (y-1));//flip/unset the Right most Set bit
         System.out.println(Integer.toBinaryString(setBitTest));
 

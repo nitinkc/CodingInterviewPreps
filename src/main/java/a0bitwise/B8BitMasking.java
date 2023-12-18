@@ -3,7 +3,6 @@ package a0bitwise;
 public class B8BitMasking {
     public static void main(String[] args) {
         //using bit mask : 1 << n
-
         int x = -237;
         int n = 3;
         System.out.println(Integer.toBinaryString(x));
@@ -17,8 +16,6 @@ public class B8BitMasking {
     private static void toggleNthBit(int x, int n) {
         int toggledBit = x ^ (1 << n);
         System.out.println(Integer.toBinaryString(toggledBit));
-
-
     }
 
     private static void turnOnNthBit(int x, int n) {
@@ -30,7 +27,4 @@ public class B8BitMasking {
         int clearedBit = x & ~(1 << n);
         System.out.println(Integer.toBinaryString(clearedBit));
     }
-
-
-
 }
