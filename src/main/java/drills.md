@@ -144,8 +144,8 @@ System.out.println(Character.compare('1','1'));//Compare character
 ```
 
 # String
-
 # Sorting
+
 
 ### Arrays Class
 `Arrays.sort(arr)` returns void
