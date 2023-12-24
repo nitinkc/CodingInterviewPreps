@@ -8,9 +8,12 @@ import java.util.List;
 public class ListCollectionsUtilities {
     public static void main(String[] args) {
         sortList();
-        collectionsSort();
-        collectionsSortNullSafe();
+        //collectionsSort();
+        //collectionsSortNullSafe();
+        //findMax();
+    }
 
+    private static void findMax() {
         List<Integer> integerListWithNull = Arrays.asList(5, 6, 71, 2, 3);
         List<String> emptyList = Collections.emptyList();
         Integer max = Collections.max(integerListWithNull);//Not null safe
@@ -48,12 +51,17 @@ public class ListCollectionsUtilities {
     }
 
     private static void sortList() {
-        List<Integer> list = Arrays.asList(4,5,3,8,2,71);
-        list.sort(Comparator.naturalOrder());
-        list.sort(Comparator.reverseOrder());
+        //use Comparator.nullsFirst or nullsLast to accomodate the null values
+        List<Integer> list = Arrays.asList(null,4,5,null,3,8,2,71,null);
+
+        list.sort(Comparator.nullsLast(Comparator.naturalOrder()));
         System.out.println("List Sort " + list);
 
-        List<String> stringList = Arrays.asList("apple", "banana", "orange");
-        stringList.sort(Comparator.comparing(String::length).reversed());
+        list.sort(Comparator.nullsFirst(Comparator.reverseOrder()));
+        System.out.println("List Sort " + list);
+
+        List<String> stringList = Arrays.asList("apple", "banana", "orange",null);
+        stringList.sort(Comparator.nullsFirst(Comparator.comparing(String::length).reversed()));
+        System.out.println(stringList);
     }
 }

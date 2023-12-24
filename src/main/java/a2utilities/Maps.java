@@ -16,7 +16,35 @@ public class Maps {
 
         //iterateMaps(namesList);
 
-        countFrequency();
+        //countFrequency();
+
+        findElements();
+
+        List<String> stringList = Arrays.asList("apple","banana", "orange");
+        Collections.sort(stringList, Comparator.comparing(String::length));
+    }
+
+    private static void findElements() {
+        List<String> namesList = Arrays.asList(
+                "Harry", "Hermione", "Ron",
+                "Harry", "Ron", "Ron", "Remus"
+        );
+        Map<String,Integer> map = new HashMap<>();
+        for (String name : namesList) {
+            map.put(name, name.length());
+        }
+
+        boolean containsValue = map.containsValue(3);
+        System.out.println(containsValue);
+
+        boolean containsKey = map.containsKey("Harry");
+        System.out.println(containsKey);
+
+        // Iterate over the map using entrySet()
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+        }
     }
 
     private static void countFrequency() {
