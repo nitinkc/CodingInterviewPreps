@@ -1,5 +1,5 @@
 /*
-package ArraysProblems.peob7;
+package ArraysProblems.prob;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package ArraysProblems.peob7;
+package ArraysProblems.prob;
 
 class Sol1_BruteForce {
     public static int[] smallestDifference(int[] arrayOne, int[] arrayTwo) {
