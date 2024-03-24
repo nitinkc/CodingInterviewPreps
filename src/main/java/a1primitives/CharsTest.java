@@ -10,6 +10,17 @@ public class CharsTest {
         char chArray[] = new char[127];
         //System.out.println((int) ',');
         // char2int();
+
+
+        int num = 123456789;
+        int numberOfDigits = (int) Math.floor(Math.log10(num)) + 1;
+        System.out.println(numberOfDigits);
+        System.out.println(String.valueOf(num).length());
+
+        Integer fromString = Integer.valueOf("25");//From String or primitive to Wrapper
+        System.out.println(fromString);
+
+
     }
 
     private static void char2int() {
@@ -26,7 +37,8 @@ public class CharsTest {
     }
 
     private static void charIntTest(int[] chars) {
-        char test = 'a';
+        char test = 'a';//aaA
+        chars[test]++;
         chars[test]++;
         chars['A']++;
         System.out.println(Arrays.toString(chars));
