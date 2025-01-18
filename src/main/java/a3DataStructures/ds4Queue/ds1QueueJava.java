@@ -20,7 +20,7 @@ public class ds1QueueJava {
         System.out.println(q.poll());
         System.out.println(q.peek());
         // Check if the queue is empty
-        System.out.println("Is the queue empty? " + q.isEmpty()); // true
+        System.out.println("Is the queue empty? " + q.isEmpty());
 
     }
 }
