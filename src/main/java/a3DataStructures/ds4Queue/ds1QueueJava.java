@@ -14,10 +14,13 @@ public class ds1QueueJava {
             q.add("Nitin - " + i);
         }
         System.out.println(q.peek());
-        q.remove();
+        q.remove();//Void method, just removes
 
         //Poll method removes and returns the head of the queue. It returns null if the queue is empty.
         System.out.println(q.poll());
         System.out.println(q.peek());
+        // Check if the queue is empty
+        System.out.println("Is the queue empty? " + q.isEmpty()); // true
+
     }
 }
