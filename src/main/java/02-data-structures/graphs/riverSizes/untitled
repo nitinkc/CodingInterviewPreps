@@ -1,0 +1,172 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{
+  "matrix": [
+    [1, 0, 0, 1, 0],
+    [1, 0, 1, 0, 0],
+    [0, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1],
+    [1, 0, 1, 1, 0]
+  ]
+}
+Test Case 2
+{"matrix": [[0]]}
+Test Case 3
+{"matrix": [[1]]}
+Test Case 4
+{"matrix": [[1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0]]}
+Test Case 5
+{"matrix": [[1, 0, 0, 1], [1, 0, 1, 0], [0, 0, 1, 0], [1, 0, 1, 0]]}
+Test Case 6
+{
+  "matrix": [
+    [1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0],
+    [1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0],
+    [0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1],
+    [1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0],
+    [1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1]
+  ]
+}
+Test Case 7
+{
+  "matrix": [
+    [1, 0, 0, 0, 0, 0, 1],
+    [0, 1, 0, 0, 0, 1, 0],
+    [0, 0, 1, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0],
+    [0, 0, 1, 0, 1, 0, 0],
+    [0, 1, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1]
+  ]
+}
+Test Case 8
+{
+  "matrix": [
+    [1, 0, 0, 0, 0, 0, 1],
+    [0, 1, 0, 0, 0, 1, 0],
+    [0, 0, 1, 0, 1, 0, 0],
+    [0, 0, 1, 1, 1, 0, 0],
+    [0, 0, 1, 0, 1, 0, 0],
+    [0, 1, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1]
+  ]
+}
+Test Case 9
+{
+  "matrix": [
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0]
+  ]
+}
+Test Case 10
+{
+  "matrix": [
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1]
+  ]
+}
+Test Case 11
+{
+  "matrix": [
+    [1, 1, 0, 0, 0, 0, 1, 1],
+    [1, 0, 1, 1, 1, 1, 0, 1],
+    [0, 1, 1, 0, 0, 0, 1, 1]
+  ]
+}
+Test Case 12
+{
+  "matrix": [
+    [1, 1, 0],
+    [1, 0, 1],
+    [1, 1, 1],
+    [1, 1, 0],
+    [1, 0, 1],
+    [0, 1, 0],
+    [1, 0, 0],
+    [1, 0, 0],
+    [0, 0, 0],
+    [1, 0, 0],
+    [1, 0, 1],
+    [1, 1, 1]
+  ]
+}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

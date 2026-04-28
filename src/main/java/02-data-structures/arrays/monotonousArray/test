@@ -1,0 +1,209 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+Run Code
+Solution 1
+Solution 2
+▲
+1
+// Copyright © 2020 AlgoExpert, LLC. All rights reserved.
+2
+​
+3
+class Program {
+4
+  // O(n) time | O(1) space - where n is the length of the array
+5
+  public static boolean isMonotonic(int[] array) {
+6
+    var isNonDecreasing = true;
+7
+    var isNonIncreasing = true;
+8
+    for (int i = 1; i < array.length; i++) {
+9
+      if (array[i] < array[i - 1]) {
+10
+        isNonDecreasing = false;
+11
+      }
+12
+      if (array[i] > array[i - 1]) {
+13
+        isNonIncreasing = false;
+14
+      }
+15
+    }
+16
+​
+17
+    return isNonDecreasing || isNonIncreasing;
+18
+  }
+19
+}
+20
+​
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{"array": [-1, -5, -10, -1100, -1100, -1101, -1102, -9001]}
+Test Case 2
+{"array": []}
+Test Case 3
+{"array": [1]}
+Test Case 4
+{"array": [1, 2]}
+Test Case 5
+{"array": [2, 1]}
+Test Case 6
+{"array": [1, 5, 10, 1100, 1101, 1102, 9001]}
+Test Case 7
+{"array": [-1, -5, -10, -1100, -1101, -1102, -9001]}
+Test Case 8
+{"array": [-1, -5, -10, -1100, -900, -1101, -1102, -9001]}
+Test Case 9
+{"array": [1, 2, 0]}
+Test Case 10
+{"array": [1, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 7, 9, 10, 11]}
+Test Case 11
+{"array": [1, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 11]}
+Test Case 12
+{"array": [-1, -1, -2, -3, -4, -5, -5, -5, -6, -7, -8, -7, -9, -10, -11]}
+Test Case 13
+{"array": [-1, -1, -2, -3, -4, -5, -5, -5, -6, -7, -8, -8, -9, -10, -11]}
+Test Case 14
+{"array": [-1, -1, -1, -1, -1, -1, -1, -1]}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Yay, our code passed all the test cases!
+
+Test Case 1 passed!
+Our Code's Output
+true
+Input(s)
+{"array": [-1, -5, -10, -1100, -1100, -1101, -1102, -9001]}
+Test Case 2 passed!
+Our Code's Output
+true
+Input(s)
+{"array": []}
+Test Case 3 passed!
+Our Code's Output
+true
+Input(s)
+{"array": [1]}
+Test Case 4 passed!
+Our Code's Output
+true
+Input(s)
+{"array": [1, 2]}
+Test Case 5 passed!
+Our Code's Output
+true
+Input(s)
+{"array": [2, 1]}
+Test Case 6 passed!
+Our Code's Output
+true
+Input(s)
+{"array": [1, 5, 10, 1100, 1101, 1102, 9001]}
+Test Case 7 passed!
+Our Code's Output
+true
+Input(s)
+{"array": [-1, -5, -10, -1100, -1101, -1102, -9001]}
+Test Case 8 passed!
+Our Code's Output
+false
+Input(s)
+{"array": [-1, -5, -10, -1100, -900, -1101, -1102, -9001]}
+Test Case 9 passed!
+Our Code's Output
+false
+Input(s)
+{"array": [1, 2, 0]}
+Test Case 10 passed!
+Our Code's Output
+false
+Input(s)
+{"array": [1, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 7, 9, 10, 11]}
+Test Case 11 passed!
+Our Code's Output
+true
+Input(s)
+{"array": [1, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 11]}
+Test Case 12 passed!
+Our Code's Output
+false
+Input(s)
+{"array": [-1, -1, -2, -3, -4, -5, -5, -5, -6, -7, -8, -7, -9, -10, -11]}
+Test Case 13 passed!
+Our Code's Output
+true
+Input(s)
+{"array": [-1, -1, -2, -3, -4, -5, -5, -5, -6, -7, -8, -8, -9, -10, -11]}
+Test Case 14 passed!
+Our Code's Output
+true
+Input(s)
+{"array": [-1, -1, -1, -1, -1, -1, -1, -1]}

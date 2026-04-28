@@ -1,0 +1,99 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{"string": "aefoaefcdaefcdaed", "substring": "aefcdaed"}
+Test Case 2
+{"string": "testwafwafawfawfawfawfawfawfawfa", "substring": "fawfawfawfawfa"}
+Test Case 3
+{
+  "string": "tesseatesgawatewtesaffawgfawtteafawtesftawfawfawfwfawftest",
+  "substring": "test"
+}
+Test Case 4
+{"string": "aaabaabacdedfaabaabaaa", "substring": "aabaabaaa"}
+Test Case 5
+{"string": "abxabcabcaby", "substring": "abcaby"}
+Test Case 6
+{"string": "decadaafcdf", "substring": "daf"}
+Test Case 7
+{"string": "aefoaefcdaefcdaed", "substring": "aefcaefaeiaefcd"}
+Test Case 8
+{"string": "aefcdfaecdaefaefcdaefeaefcdcdeae", "substring": "aefcdaefeaefcd"}
+Test Case 9
+{"string": "bccbefbcdabbbcabfdcfe", "substring": "abc"}
+Test Case 10
+{"string": "adafccfefbbbfeeccbcfd", "substring": "ecb"}
+Test Case 11
+{
+  "string": "testwherethefullstringmatches",
+  "substring": "testwherethefullstringmatches"
+}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

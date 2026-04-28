@@ -1,0 +1,175 @@
+site_name: Coding Interview Preparation
+site_description: Complete documentation for algorithms and data structures
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - tables
+  - toc
+  - codehilite
+
+nav:
+  - Home: index.md
+  - Phase 1 - Fundamentals:
+    - Overview: "01-java-algo-datastruct/index.md"
+    - Big O Notation: "01-java-algo-datastruct/01-datastruct.md"
+  - Phase 2 - Core Data Structures:
+    - Arrays & Basics: "01-java-algo-datastruct/01-datastruct.md"
+    - Linked Lists: "01-java-algo-datastruct/02-linkedlist.md"
+    - Stacks & Queues: "01-java-algo-datastruct/03-stack-queue.md"
+    - Hash Tables: "01-java-algo-datastruct/10-hashtable.md"
+  - Phase 3 - Trees (Foundation):
+    - Binary Search Trees: "01-java-algo-datastruct/04-bst.md"
+    - Heaps: "01-java-algo-datastruct/09-heaps.md"
+    - Trie & TST: "01-java-algo-datastruct/tst.md"
+  - Phase 4 - Searching & Sorting:
+    - Sorting Overview: "02-algorithms-part2/sorting/index.md"
+    - Simple Sorts (Bubble, Insertion): "02-algorithms-part2/sorting/bubblesort.md"
+    - Efficient Sorts (Merge, Quick): "02-algorithms-part2/sorting/mergesort.md"
+    - String Search:
+      - Boyer-Moore: "02-algorithms-part2/boyer-moore.md"
+      - Rabin-Karp: "02-algorithms-part2/rabin-karp.md"
+  - Phase 5 - Advanced Trees:
+    - AVL Trees: "01-java-algo-datastruct/05-avl.md"
+    - Red-Black Trees: "01-java-algo-datastruct/06-red-black-tree.md"
+    - Splay Trees: "01-java-algo-datastruct/07-splay.md"
+    - B-Trees: "01-java-algo-datastruct/08-btree.md"
+  - Phase 6 - Graph Basics:
+    - Graph Traversal (BFS/DFS): "03-advanced-graphs/graphtraverse.md"
+    - BFS Theory: "03-advanced-graphs/bfstheory.md"
+  - Phase 7 - Advanced Algorithms (Coming Soon):
+    - "Advanced content will be organized here once DS fundamentals are solid"
+  - Part 5 - Practice Problems:
+    - Overview: "05-practice-problems/index.md"
+    - Dynamic Programming:
+      - Overview: "05-practice-problems/DynamicProgramming/index.md"
+      - Disk Stacking: "05-practice-problems/DynamicProgramming/diskStacking/index.md"
+      - Knapsack Problem: "05-practice-problems/DynamicProgramming/knapsackProblem/index.md"
+      - Levenshtein Distance: "05-practice-problems/DynamicProgramming/levenshteinDistance/index.md"
+      - Longest Common Subsequence: "05-practice-problems/DynamicProgramming/longestCommonSubsequence/index.md"
+      - Longest Increasing Subsequence: "05-practice-problems/DynamicProgramming/longestIncreasingSubsequence/index.md"
+      - Longest String Chain: "05-practice-problems/DynamicProgramming/longestStringChain/index.md"
+      - Max Profit With K Transactions: "05-practice-problems/DynamicProgramming/maxProfitWithKTransactions/index.md"
+      - Max Subset Sum No Adjacent: "05-practice-problems/DynamicProgramming/maxSubsetSumNoAdjacent/index.md"
+      - Max Sum Increasing Subsequence: "05-practice-problems/DynamicProgramming/maxSumIncreasingSubsequence/index.md"
+      - Min Number Of Coins For Change: "05-practice-problems/DynamicProgramming/minNumberOfCoinsForChange/index.md"
+      - Min Number Of Jumps: "05-practice-problems/DynamicProgramming/minNumberOfJumps/index.md"
+      - Number Of Ways To Make Change: "05-practice-problems/DynamicProgramming/numberOfWaysToMakeChange/index.md"
+      - Numbers In Pi: "05-practice-problems/DynamicProgramming/numbersInPi/index.md"
+      - Palindrome Partitioning Min Cuts: "05-practice-problems/DynamicProgramming/palindromePartitioningMinCuts/index.md"
+      - Water Area: "05-practice-problems/DynamicProgramming/waterArea/index.md"
+    - Arrays:
+      - Overview: "05-practice-problems/arrays/index.md"
+      - Apartment Hunting: "05-practice-problems/arrays/apartmentHunting/index.md"
+      - Calendar Matching: "05-practice-problems/arrays/calendarMatching/index.md"
+      - Four Number Sum: "05-practice-problems/arrays/fourNumberSum/index.md"
+      - Largest Range: "05-practice-problems/arrays/largestRange/index.md"
+      - Longest Peak: "05-practice-problems/arrays/longestPeak/index.md"
+      - Min Rewards: "05-practice-problems/arrays/minRewards/index.md"
+      - Monotonous Array: "05-practice-problems/arrays/monotonousArray/index.md"
+      - Move Element To End: "05-practice-problems/arrays/moveElementToEnd/index.md"
+      - Smallest Difference: "05-practice-problems/arrays/smallestDifference/index.md"
+      - Spiral Traverse: "05-practice-problems/arrays/spiralTraverse/index.md"
+      - Subarray Sort: "05-practice-problems/arrays/subarraySort/index.md"
+      - Three Number Sum: "05-practice-problems/arrays/threeNumberSum/index.md"
+      - Two Number Sum: "05-practice-problems/arrays/twoNumberSum/index.md"
+      - Zigzag Traverse: "05-practice-problems/arrays/zigzagTraverse/index.md"
+    - Binary Search Trees:
+      - Overview: "05-practice-problems/binarySearchTrees/index.md"
+      - Bst Construction: "05-practice-problems/binarySearchTrees/bstConstruction/index.md"
+      - Bst Traversal: "05-practice-problems/binarySearchTrees/bstTraversal/index.md"
+      - Find Closest Value In Bst: "05-practice-problems/binarySearchTrees/findClosestValueInBst/index.md"
+      - Same Bsts: "05-practice-problems/binarySearchTrees/sameBsts/index.md"
+      - Validate Bst: "05-practice-problems/binarySearchTrees/validateBst/index.md"
+    - Binary Trees:
+      - Overview: "05-practice-problems/binaryTrees/index.md"
+      - Branch Sums: "05-practice-problems/binaryTrees/branchSums/index.md"
+      - Flatten Binary Tree: "05-practice-problems/binaryTrees/flattenBinaryTree/index.md"
+      - Invert Binary Tree: "05-practice-problems/binaryTrees/invertBinaryTree/index.md"
+      - Iterative In-Order Traversal: "05-practice-problems/binaryTrees/iterativeIn-OrderTraversal/index.md"
+      - Max Path Sum In Binary Tree: "05-practice-problems/binaryTrees/maxPathSumInBinaryTree/index.md"
+      - Right Sibling Tree: "05-practice-problems/binaryTrees/rightSiblingTree/index.md"
+    - Famous Algorithms:
+      - Overview: "05-practice-problems/famousAlgorithms/index.md"
+      - Kadanes Algorithm: "05-practice-problems/famousAlgorithms/kadanesAlgorithm/index.md"
+      - Knuth Morris Pratt Algorithm: "05-practice-problems/famousAlgorithms/knuthMorrisPrattAlgorithm/index.md"
+      - Topological Sort: "05-practice-problems/famousAlgorithms/topologicalSort/index.md"
+    - Graphs:
+      - Overview: "05-practice-problems/graphs/index.md"
+      - Airport Connections: "05-practice-problems/graphs/airportConnections/index.md"
+      - Boggle Board: "05-practice-problems/graphs/boggleBoard/index.md"
+      - Breadth First Search: "05-practice-problems/graphs/breadthFirstSearch/index.md"
+      - Depth First Search: "05-practice-problems/graphs/depthFirstSearch/index.md"
+      - Rectangle Mania: "05-practice-problems/graphs/rectangleMania/index.md"
+      - River Sizes: "05-practice-problems/graphs/riverSizes/index.md"
+      - Single Cycle Check: "05-practice-problems/graphs/singleCycleCheck/index.md"
+      - Youngest Common Ancestor: "05-practice-problems/graphs/youngestCommonAncestor/index.md"
+    - Heaps:
+      - Overview: "05-practice-problems/heaps/index.md"
+      - Continuous Median: "05-practice-problems/heaps/continuousMedian/index.md"
+      - Min Heap Construction: "05-practice-problems/heaps/minHeapConstruction/index.md"
+    - Linked Lists:
+      - Overview: "05-practice-problems/linkedLists/index.md"
+      - Find Loop: "05-practice-problems/linkedLists/findLoop/index.md"
+      - Linked List Construction: "05-practice-problems/linkedLists/linkedListConstruction/index.md"
+      - Lru Cache: "05-practice-problems/linkedLists/lruCache/index.md"
+      - Merge Linked Lists: "05-practice-problems/linkedLists/mergeLinkedLists/index.md"
+      - Remove Kth Node From End: "05-practice-problems/linkedLists/removeKthNodeFromEnd/index.md"
+      - Reverse Linked List: "05-practice-problems/linkedLists/reverseLinkedList/index.md"
+    - Recursion:
+      - Overview: "05-practice-problems/recursion/index.md"
+      - Interweaving Strings: "05-practice-problems/recursion/interweavingStrings/index.md"
+      - Lowest Common Manager: "05-practice-problems/recursion/lowestCommonManager/index.md"
+      - Nth Fibonacci: "05-practice-problems/recursion/nthFibonacci/index.md"
+      - Number Of Binary Tree Topologies: "05-practice-problems/recursion/numberOfBinaryTreeTopologies/index.md"
+      - Permutations: "05-practice-problems/recursion/permutations/index.md"
+      - Powerset: "05-practice-problems/recursion/powerset/index.md"
+      - Product Sum: "05-practice-problems/recursion/productSum/index.md"
+    - Searching:
+      - Overview: "05-practice-problems/searching/index.md"
+      - Binary Search: "05-practice-problems/searching/binarySearch/index.md"
+      - Find Three Largest Numbers: "05-practice-problems/searching/findThreeLargestNumbers/index.md"
+      - Quickselect: "05-practice-problems/searching/quickselect/index.md"
+      - Search For Range: "05-practice-problems/searching/searchForRange/index.md"
+      - Search In Sorted Matrix: "05-practice-problems/searching/searchInSortedMatrix/index.md"
+      - Shifted Binary Search: "05-practice-problems/searching/shiftedBinarySearch/index.md"
+    - Sorting:
+      - Overview: "05-practice-problems/sorting/index.md"
+      - Bubble Sort: "05-practice-problems/sorting/bubbleSort/index.md"
+      - Heap Sort: "05-practice-problems/sorting/heapSort/index.md"
+      - Insertion Sort: "05-practice-problems/sorting/insertionSort/index.md"
+      - Merge Sort: "05-practice-problems/sorting/mergeSort/index.md"
+      - Quick Sort: "05-practice-problems/sorting/quickSort/index.md"
+      - Selection Sort: "05-practice-problems/sorting/selectionSort/index.md"
+    - Stacks:
+      - Overview: "05-practice-problems/stacks/index.md"
+      - Balanced Brackets: "05-practice-problems/stacks/balancedBrackets/index.md"
+      - Min Max Stack Construction: "05-practice-problems/stacks/minMaxStackConstruction/index.md"
+    - Strings:
+      - Overview: "05-practice-problems/strings/index.md"
+      - Caesar Cipher Encryptor: "05-practice-problems/strings/caesarCipherEncryptor/index.md"
+      - Group Anagrams: "05-practice-problems/strings/groupAnagrams/index.md"
+      - Longest Palindromic Substring: "05-practice-problems/strings/longestPalindromicSubstring/index.md"
+      - Longest Substring Without Duplication: "05-practice-problems/strings/longestSubstringWithoutDuplication/index.md"
+      - Palindrome Check: "05-practice-problems/strings/palindromeCheck/index.md"
+      - Pattern Matcher: "05-practice-problems/strings/patternMatcher/index.md"
+      - Smallest Substring Containing: "05-practice-problems/strings/smallestSubstringContaining/index.md"
+      - Underscorify Substring: "05-practice-problems/strings/underscorifySubstring/index.md"
+    - Tries:
+      - Overview: "05-practice-problems/tries/index.md"
+      - Multi String Search: "05-practice-problems/tries/multiStringSearch/index.md"
+      - Suffix Trie Construction: "05-practice-problems/tries/suffixTrieConstruction/index.md"

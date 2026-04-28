@@ -1,0 +1,87 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{"words": ["yo", "act", "flop", "tac", "cat", "oy", "olfp"]}
+Test Case 2
+{"words": []}
+Test Case 3
+{"words": ["test"]}
+Test Case 4
+{"words": ["abc", "dabd", "bca", "cab", "ddba"]}
+Test Case 5
+{"words": ["abc", "cba", "bca"]}
+Test Case 6
+{"words": ["zxc", "asd", "weq", "sda", "qwe", "xcz"]}
+Test Case 7
+{"words": ["cinema", "a", "flop", "iceman", "meacyne", "lofp", "olfp"]}
+Test Case 8
+{"words": ["abc", "abe", "abf", "abg"]}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

@@ -1,0 +1,95 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+Video Solution
+Prompt
+Scratchpad
+Our Solution(s)
+Video Solution
+Your Solutions
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{"n": 7, "denoms": [1, 5, 10]}
+Test Case 2
+{"n": 0, "denoms": [1, 2, 3]}
+Test Case 3
+{"n": 3, "denoms": [2, 1]}
+Test Case 4
+{"n": 4, "denoms": [1, 5, 10]}
+Test Case 5
+{"n": 10, "denoms": [1, 5, 10]}
+Test Case 6
+{"n": 11, "denoms": [1, 5, 10]}
+Test Case 7
+{"n": 24, "denoms": [1, 5, 10]}
+Test Case 8
+{"n": 25, "denoms": [1, 5, 10]}
+Test Case 9
+{"n": 7, "denoms": [2, 4]}
+Test Case 10
+{"n": 7, "denoms": [3, 7]}
+Test Case 11
+{"n": 9, "denoms": [3, 5]}
+Test Case 12
+{"n": 9, "denoms": [3, 4, 5]}
+Test Case 13
+{"n": 135, "denoms": [39, 45, 130, 40, 4, 1]}
+Test Case 14
+{"n": 135, "denoms": [39, 45, 130, 40, 4, 1, 60, 75]}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

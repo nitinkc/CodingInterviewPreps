@@ -1,0 +1,149 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{"strings": ["abde", "abc", "abd", "abcde", "ade", "ae", "1abde", "abcdef"]}
+Test Case 2
+{"strings": ["abcdefg", "abcdef", "abcde", "abcd", "abc", "ab", "a"]}
+Test Case 3
+{"strings": ["abcdefg", "abdefg", "abdfg", "bdfg", "bfg", "bg", "g"]}
+Test Case 4
+{
+  "strings": [
+    "abcdefg",
+    "1234",
+    "abdefg",
+    "abdfg",
+    "123",
+    "12",
+    "bg",
+    "g",
+    "12345",
+    "12a345"
+  ]
+}
+Test Case 5
+{
+  "strings": [
+    "abcdefg1",
+    "1234c",
+    "abdefg2",
+    "abdfg",
+    "123",
+    "122",
+    "bgg",
+    "g",
+    "1a2345",
+    "12a345"
+  ]
+}
+Test Case 6
+{
+  "strings": [
+    "lgoprt",
+    "12345678",
+    "algoxpert",
+    "abcde",
+    "123468",
+    "lgoxprt",
+    "abde",
+    "lgopt",
+    "1234678",
+    "ade",
+    "ae",
+    "algoxprt",
+    "a",
+    "1abde",
+    "lgpt",
+    "123456789",
+    "234678",
+    "algoexpert"
+  ]
+}
+Test Case 7
+{
+  "strings": [
+    "12345678",
+    "algoxpert",
+    "123468",
+    "abde",
+    "lgopt",
+    "1234678",
+    "ade",
+    "ae",
+    "a",
+    "1abde",
+    "lgpt",
+    "123456789",
+    "234678",
+    "algoexpert"
+  ]
+}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

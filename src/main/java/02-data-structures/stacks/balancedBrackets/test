@@ -1,0 +1,101 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{"string": "([])(){}(())()()"}
+Test Case 2
+{"string": "()[]{}{"}
+Test Case 3
+{"string": "(((((({{{{{[[[[[([)])]]]]]}}}}}))))))"}
+Test Case 4
+{"string": "()()[{()})]"}
+Test Case 5
+{"string": "(()())((()()()))"}
+Test Case 6
+{"string": "{}()"}
+Test Case 7
+{"string": "()([])"}
+Test Case 8
+{"string": "((){{{{[]}}}})"}
+Test Case 9
+{"string": "((({})()))"}
+Test Case 10
+{"string": "(([]()()){})"}
+Test Case 11
+{
+  "string": "(((((([[[[[[{{{{{{{{{{{{()}}}}}}}}}}}}]]]]]]))))))((([])({})[])[])[]([]){}(())"
+}
+Test Case 12
+{"string": "{[[[[({(}))]]]]}"}
+Test Case 13
+{"string": "[((([])([]){}){}){}([])[]((())"}
+Test Case 14
+{"string": ")[]}"}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

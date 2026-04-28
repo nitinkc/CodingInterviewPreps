@@ -1,0 +1,104 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{"pattern": "xxyxxy", "string": "gogopowerrangergogopowerranger"}
+Test Case 2
+{"pattern": "xyxy", "string": "abab"}
+Test Case 3
+{"pattern": "yxyx", "string": "abab"}
+Test Case 4
+{"pattern": "yxx", "string": "yomama"}
+Test Case 5
+{"pattern": "yyxyyx", "string": "gogopowerrangergogopowerranger"}
+Test Case 6
+{"pattern": "xyx", "string": "thisshouldobviouslybewrong"}
+Test Case 7
+{"pattern": "xxxx", "string": "testtesttesttest"}
+Test Case 8
+{"pattern": "yyyy", "string": "testtesttesttest"}
+Test Case 9
+{"pattern": "xxyxyy", "string": "testtestwrongtestwrongtest"}
+Test Case 10
+{
+  "pattern": "xyxxxyyx",
+  "string": "baddaddoombaddadoomibaddaddoombaddaddoombaddaddoombaddaddoomibaddaddoomibaddaddoom"
+}
+Test Case 11
+{
+  "pattern": "yxyyyxxy",
+  "string": "baddaddoombaddaddoomibaddaddoombaddaddoombaddaddoombaddaddoomibaddaddoomibaddaddoom"
+}
+Test Case 12
+{
+  "pattern": "xyxxxyyx",
+  "string": "baddaddoombaddaddoomibaddaddoombaddaddoombaddaddoombaddaddoomibaddaddoomibaddaddoom"
+}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

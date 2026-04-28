@@ -1,0 +1,94 @@
+Hide
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{"heights": [0, 8, 0, 0, 5, 0, 0, 10, 0, 0, 1, 1, 0, 3]}
+Test Case 2
+{"heights": []}
+Test Case 3
+{"heights": [0, 0, 0, 0, 0]}
+Test Case 4
+{"heights": [0, 1, 0, 0, 0]}
+Test Case 5
+{"heights": [0, 1, 1, 0, 0]}
+Test Case 6
+{"heights": [0, 1, 2, 1, 1]}
+Test Case 7
+{"heights": [0, 1, 0, 1, 0]}
+Test Case 8
+{"heights": [0, 1, 0, 1, 0, 2, 0, 3]}
+Test Case 9
+{"heights": [0, 8, 0, 0, 10, 0, 0, 10, 0, 0, 1, 1, 0, 3]}
+Test Case 10
+{"heights": [0, 100, 0, 0, 10, 1, 1, 10, 1, 0, 1, 1, 0, 100]}
+Test Case 11
+{"heights": [0, 100, 0, 0, 10, 1, 1, 10, 1, 0, 1, 1, 0, 0]}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

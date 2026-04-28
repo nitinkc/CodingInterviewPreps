@@ -1,0 +1,850 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+Video Solution
+Prompt
+Scratchpad
+Our Solution(s)
+Video Solution
+Your Solutions
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{
+  "blocks": [
+    {"gym": false, "school": true, "store": false},
+    {"gym": true, "school": false, "store": false},
+    {"gym": true, "school": true, "store": false},
+    {"gym": false, "school": true, "store": false},
+    {"gym": false, "school": true, "store": true}
+  ],
+  "reqs": ["gym", "school", "store"]
+}
+Test Case 2
+{
+  "blocks": [
+    {"gym": false, "office": true, "school": true, "store": false},
+    {"gym": true, "office": false, "school": false, "store": false},
+    {"gym": true, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": true}
+  ],
+  "reqs": ["gym", "office", "school", "store"]
+}
+Test Case 3
+{
+  "blocks": [
+    {"gym": false, "office": true, "school": true, "store": false},
+    {"gym": true, "office": false, "school": false, "store": false},
+    {"gym": true, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": true}
+  ],
+  "reqs": ["gym", "office", "school", "store"]
+}
+Test Case 4
+{
+  "blocks": [
+    {
+      "foo": true,
+      "gym": false,
+      "kappa": false,
+      "office": true,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": true,
+      "kappa": false,
+      "office": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": true,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": false,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": true,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": false,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": true
+    }
+  ],
+  "reqs": ["gym", "school", "store"]
+}
+Test Case 5
+{
+  "blocks": [
+    {"gym": true, "school": true, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": true, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": false, "store": true},
+    {"gym": true, "school": false, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": true, "store": false}
+  ],
+  "reqs": ["gym", "school", "store"]
+}
+Test Case 6
+{
+  "blocks": [
+    {"gym": true, "pool": false, "school": true, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": true, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": true},
+    {"gym": true, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": true, "store": false},
+    {"gym": false, "pool": true, "school": false, "store": false}
+  ],
+  "reqs": ["gym", "pool", "school", "store"]
+}
+Test Case 7
+{
+  "blocks": [
+    {
+      "gym": true,
+      "office": false,
+      "pool": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": true,
+      "pool": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": true,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": true
+    },
+    {
+      "gym": true,
+      "office": true,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": true,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": true,
+      "school": false,
+      "store": false
+    }
+  ],
+  "reqs": ["gym", "pool", "school", "store"]
+}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+
+
+
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+Our Solution(s)
+Prompt
+Scratchpad
+Your Solutions
+Our Solution(s)
+Video Solution
+
+Run Code
+Solution 1
+Solution 2
+1
+// Copyright © 2020 AlgoExpert, LLC. All rights reserved.
+2
+​
+3
+import java.util.*;
+4
+​
+5
+class Program {
+6
+  // O(b^2*r) time | O(b) space - where b is the number of blocks and r is the number of
+7
+  // requirements
+8
+  public static int apartmentHunting(List<Map<String, Boolean>> blocks, String[] reqs) {
+9
+    int[] maxDistancesAtBlocks = new int[blocks.size()];
+10
+    Arrays.fill(maxDistancesAtBlocks, Integer.MIN_VALUE);
+11
+​
+12
+    for (int i = 0; i < blocks.size(); i++) {
+13
+      for (String req : reqs) {
+14
+        int closestReqDistance = Integer.MAX_VALUE;
+15
+        for (int j = 0; j < blocks.size(); j++) {
+16
+          if (blocks.get(j).get(req)) {
+17
+            closestReqDistance = Math.min(closestReqDistance, distanceBetween(i, j));
+18
+          }
+19
+        }
+20
+        maxDistancesAtBlocks[i] = Math.max(maxDistancesAtBlocks[i], closestReqDistance);
+21
+      }
+22
+    }
+23
+    return getIdxAtMinValue(maxDistancesAtBlocks);
+24
+  }
+25
+​
+26
+  public static int getIdxAtMinValue(int[] array) {
+27
+    int idxAtMinValue = 0;
+28
+    int minValue = Integer.MAX_VALUE;
+29
+    for (int i = 0; i < array.length; i++) {
+30
+      int currentValue = array[i];
+31
+      if (currentValue < minValue) {
+32
+        minValue = currentValue;
+33
+        idxAtMinValue = i;
+34
+      }
+35
+    }
+36
+    return idxAtMinValue;
+37
+  }
+38
+​
+39
+  public static int distanceBetween(int a, int b) {
+40
+    return Math.abs(a - b);
+41
+  }
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{
+  "blocks": [
+    {"gym": false, "school": true, "store": false},
+    {"gym": true, "school": false, "store": false},
+    {"gym": true, "school": true, "store": false},
+    {"gym": false, "school": true, "store": false},
+    {"gym": false, "school": true, "store": true}
+  ],
+  "reqs": ["gym", "school", "store"]
+}
+Test Case 2
+{
+  "blocks": [
+    {"gym": false, "office": true, "school": true, "store": false},
+    {"gym": true, "office": false, "school": false, "store": false},
+    {"gym": true, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": true}
+  ],
+  "reqs": ["gym", "office", "school", "store"]
+}
+Test Case 3
+{
+  "blocks": [
+    {"gym": false, "office": true, "school": true, "store": false},
+    {"gym": true, "office": false, "school": false, "store": false},
+    {"gym": true, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": true}
+  ],
+  "reqs": ["gym", "office", "school", "store"]
+}
+Test Case 4
+{
+  "blocks": [
+    {
+      "foo": true,
+      "gym": false,
+      "kappa": false,
+      "office": true,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": true,
+      "kappa": false,
+      "office": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": true,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": false,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": true,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": false,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": true
+    }
+  ],
+  "reqs": ["gym", "school", "store"]
+}
+Test Case 5
+{
+  "blocks": [
+    {"gym": true, "school": true, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": true, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": false, "store": true},
+    {"gym": true, "school": false, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": true, "store": false}
+  ],
+  "reqs": ["gym", "school", "store"]
+}
+Test Case 6
+{
+  "blocks": [
+    {"gym": true, "pool": false, "school": true, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": true, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": true},
+    {"gym": true, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": true, "store": false},
+    {"gym": false, "pool": true, "school": false, "store": false}
+  ],
+  "reqs": ["gym", "pool", "school", "store"]
+}
+Test Case 7
+{
+  "blocks": [
+    {
+      "gym": true,
+      "office": false,
+      "pool": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": true,
+      "pool": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": true,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": true
+    },
+    {
+      "gym": true,
+      "office": true,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": true,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": true,
+      "school": false,
+      "store": false
+    }
+  ],
+  "reqs": ["gym", "pool", "school", "store"]
+}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Yay, our code passed all the test cases!
+
+Test Case 1 passed!
+Our Code's Output
+3
+Input(s)
+{
+  "blocks": [
+    {"gym": false, "school": true, "store": false},
+    {"gym": true, "school": false, "store": false},
+    {"gym": true, "school": true, "store": false},
+    {"gym": false, "school": true, "store": false},
+    {"gym": false, "school": true, "store": true}
+  ],
+  "reqs": ["gym", "school", "store"]
+}
+Test Case 2 passed!
+Our Code's Output
+2
+Input(s)
+{
+  "blocks": [
+    {"gym": false, "office": true, "school": true, "store": false},
+    {"gym": true, "office": false, "school": false, "store": false},
+    {"gym": true, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": true}
+  ],
+  "reqs": ["gym", "office", "school", "store"]
+}
+Test Case 3 passed!
+Our Code's Output
+2
+Input(s)
+{
+  "blocks": [
+    {"gym": false, "office": true, "school": true, "store": false},
+    {"gym": true, "office": false, "school": false, "store": false},
+    {"gym": true, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": false},
+    {"gym": false, "office": false, "school": true, "store": true}
+  ],
+  "reqs": ["gym", "office", "school", "store"]
+}
+Test Case 4 passed!
+Our Code's Output
+4
+Input(s)
+{
+  "blocks": [
+    {
+      "foo": true,
+      "gym": false,
+      "kappa": false,
+      "office": true,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": true,
+      "kappa": false,
+      "office": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": true,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": false,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": true,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "foo": true,
+      "gym": false,
+      "kappa": false,
+      "office": false,
+      "school": true,
+      "store": true
+    }
+  ],
+  "reqs": ["gym", "school", "store"]
+}
+Test Case 5 passed!
+Our Code's Output
+2
+Input(s)
+{
+  "blocks": [
+    {"gym": true, "school": true, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": true, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": false, "store": true},
+    {"gym": true, "school": false, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": false, "store": false},
+    {"gym": false, "school": true, "store": false}
+  ],
+  "reqs": ["gym", "school", "store"]
+}
+Test Case 6 passed!
+Our Code's Output
+7
+Input(s)
+{
+  "blocks": [
+    {"gym": true, "pool": false, "school": true, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": true, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": true},
+    {"gym": true, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": false, "store": false},
+    {"gym": false, "pool": false, "school": true, "store": false},
+    {"gym": false, "pool": true, "school": false, "store": false}
+  ],
+  "reqs": ["gym", "pool", "school", "store"]
+}
+Test Case 7 passed!
+Our Code's Output
+4
+Input(s)
+{
+  "blocks": [
+    {
+      "gym": true,
+      "office": false,
+      "pool": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": true,
+      "pool": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": true,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": true
+    },
+    {
+      "gym": true,
+      "office": true,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": true,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": false,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": false,
+      "school": true,
+      "store": false
+    },
+    {
+      "gym": false,
+      "office": false,
+      "pool": true,
+      "school": false,
+      "store": false
+    }
+  ],
+  "reqs": ["gym", "pool", "school", "store"]
+}

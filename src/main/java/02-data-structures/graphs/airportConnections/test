@@ -1,0 +1,668 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["DSM", "ORD"],
+    ["ORD", "BGI"],
+    ["BGI", "LGA"],
+    ["SIN", "CDG"],
+    ["CDG", "SIN"],
+    ["CDG", "BUD"],
+    ["DEL", "DOH"],
+    ["DEL", "CDG"],
+    ["TLV", "DEL"],
+    ["EWR", "HND"],
+    ["HND", "ICN"],
+    ["HND", "JFK"],
+    ["ICN", "JFK"],
+    ["JFK", "LGA"],
+    ["EYW", "LHR"],
+    ["LHR", "SFO"],
+    ["SFO", "SAN"],
+    ["SFO", "DSM"],
+    ["SAN", "EYW"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 2
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [],
+  "startingAirport": "LGA"
+}
+Test Case 3
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [["LGA", "DSM"], ["LGA", "ORD"], ["LGA", "EYW"]],
+  "startingAirport": "LGA"
+}
+Test Case 4
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["LGA", "DSM"],
+    ["DSM", "ORD"],
+    ["LGA", "EYW"],
+    ["EYW", "JFK"],
+    ["EYW", "EWR"],
+    ["JFK", "ICN"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 5
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["LGA", "DSM"],
+    ["DSM", "ORD"],
+    ["LGA", "EYW"],
+    ["EYW", "JFK"],
+    ["EYW", "EWR"],
+    ["JFK", "ICN"],
+    ["LGA", "ICN"],
+    ["ICN", "ORD"],
+    ["ICN", "EWR"],
+    ["JFK", "DSM"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 6
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["LGA", "DSM"],
+    ["DSM", "ORD"],
+    ["LGA", "EYW"],
+    ["EYW", "JFK"],
+    ["EYW", "EWR"],
+    ["JFK", "ICN"],
+    ["LGA", "ICN"],
+    ["ICN", "ORD"],
+    ["ICN", "EWR"],
+    ["JFK", "DSM"],
+    ["ICN", "JFK"],
+    ["ORD", "DSM"],
+    ["DSM", "LGA"],
+    ["JFK", "LGA"],
+    ["JFK", "HND"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 7
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["LGA", "DSM"],
+    ["DSM", "ORD"],
+    ["LGA", "EYW"],
+    ["EYW", "JFK"],
+    ["EYW", "EWR"],
+    ["JFK", "ICN"],
+    ["LGA", "ICN"],
+    ["ICN", "ORD"],
+    ["ICN", "EWR"],
+    ["JFK", "DSM"],
+    ["ICN", "JFK"],
+    ["ORD", "DSM"],
+    ["DSM", "LGA"],
+    ["JFK", "LGA"],
+    ["JFK", "HND"],
+    ["SFO", "SIN"],
+    ["SFO", "CDG"],
+    ["SFO", "LHR"],
+    ["LHR", "DEL"],
+    ["DEL", "BGI"],
+    ["DEL", "DOH"],
+    ["DOH", "SAN"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 8
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["LGA", "DSM"],
+    ["DSM", "ORD"],
+    ["EYW", "JFK"],
+    ["EYW", "EWR"],
+    ["JFK", "ICN"],
+    ["LGA", "ICN"],
+    ["ICN", "ORD"],
+    ["ICN", "EWR"],
+    ["JFK", "DSM"],
+    ["ICN", "JFK"],
+    ["ORD", "DSM"],
+    ["DSM", "LGA"],
+    ["JFK", "LGA"],
+    ["JFK", "HND"],
+    ["SFO", "SIN"],
+    ["SFO", "CDG"],
+    ["SFO", "LHR"],
+    ["LHR", "DEL"],
+    ["DEL", "BGI"],
+    ["DEL", "DOH"],
+    ["DOH", "SAN"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 9
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["LGA", "DSM"],
+    ["SIN", "BGI"],
+    ["SIN", "CDG"],
+    ["SIN", "DEL"],
+    ["SIN", "DOH"],
+    ["SIN", "DSM"],
+    ["SIN", "EWR"],
+    ["SIN", "EYW"],
+    ["SIN", "HND"],
+    ["SIN", "ICN"],
+    ["SIN", "JFK"],
+    ["SIN", "LHR"],
+    ["SIN", "ORD"],
+    ["SFO", "SIN"],
+    ["SFO", "SAN"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 10
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["LGA", "DSM"],
+    ["DSM", "ORD"],
+    ["SIN", "BGI"],
+    ["SIN", "CDG"],
+    ["CDG", "DEL"],
+    ["DEL", "DOH"],
+    ["DEL", "CDG"],
+    ["DEL", "EWR"],
+    ["HND", "ICN"],
+    ["ICN", "JFK"],
+    ["JFK", "LGA"],
+    ["JFK", "SFO"],
+    ["EYW", "LHR"],
+    ["SFO", "ORD"],
+    ["SFO", "LGA"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 11
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["LGA", "DSM"],
+    ["DSM", "ORD"],
+    ["SIN", "BGI"],
+    ["SIN", "CDG"],
+    ["CDG", "DEL"],
+    ["DEL", "DOH"],
+    ["DEL", "CDG"],
+    ["DEL", "EWR"],
+    ["HND", "ICN"],
+    ["ICN", "JFK"],
+    ["JFK", "LGA"],
+    ["JFK", "SFO"],
+    ["EYW", "LHR"],
+    ["SFO", "ORD"],
+    ["SFO", "LGA"],
+    ["SFO", "SIN"],
+    ["CDG", "EYW"],
+    ["LGA", "SAN"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 12
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["LGA", "DSM"],
+    ["DSM", "ORD"],
+    ["SIN", "BGI"],
+    ["SIN", "CDG"],
+    ["CDG", "DEL"],
+    ["DEL", "DOH"],
+    ["DEL", "CDG"],
+    ["DEL", "EWR"],
+    ["HND", "ICN"],
+    ["ICN", "JFK"],
+    ["JFK", "LGA"],
+    ["JFK", "SFO"],
+    ["EYW", "LHR"],
+    ["SFO", "ORD"],
+    ["SFO", "LGA"],
+    ["SFO", "SIN"],
+    ["CDG", "EYW"],
+    ["ORD", "HND"],
+    ["HND", "SAN"],
+    ["LGA", "TLV"],
+    ["LGA", "BUD"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 13
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["DSM", "ORD"],
+    ["ORD", "BGI"],
+    ["BGI", "LGA"],
+    ["SIN", "CDG"],
+    ["CDG", "DEL"],
+    ["DEL", "DOH"],
+    ["DOH", "SIN"],
+    ["EWR", "HND"],
+    ["HND", "ICN"],
+    ["ICN", "JFK"],
+    ["JFK", "LGA"],
+    ["EYW", "LHR"],
+    ["LHR", "SFO"],
+    ["SFO", "SAN"],
+    ["SAN", "EYW"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 14
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["DSM", "ORD"],
+    ["ORD", "BGI"],
+    ["BGI", "LGA"],
+    ["SIN", "CDG"],
+    ["CDG", "DEL"],
+    ["DEL", "DOH"],
+    ["DOH", "SIN"],
+    ["EWR", "HND"],
+    ["HND", "ICN"],
+    ["ICN", "JFK"],
+    ["JFK", "LGA"],
+    ["EYW", "LHR"],
+    ["LHR", "SFO"],
+    ["SFO", "SAN"],
+    ["SFO", "ORD"],
+    ["SAN", "EYW"]
+  ],
+  "startingAirport": "LGA"
+}
+Test Case 15
+{
+  "airports": [
+    "BGI",
+    "CDG",
+    "DEL",
+    "DOH",
+    "DSM",
+    "EWR",
+    "EYW",
+    "HND",
+    "ICN",
+    "JFK",
+    "LGA",
+    "LHR",
+    "ORD",
+    "SAN",
+    "SFO",
+    "SIN",
+    "TLV",
+    "BUD"
+  ],
+  "routes": [
+    ["DSM", "ORD"],
+    ["ORD", "BGI"],
+    ["BGI", "LGA"],
+    ["SIN", "CDG"],
+    ["CDG", "DEL"],
+    ["DEL", "DOH"],
+    ["DOH", "SIN"],
+    ["EWR", "HND"],
+    ["HND", "ICN"],
+    ["ICN", "JFK"],
+    ["JFK", "LGA"],
+    ["EYW", "LHR"],
+    ["LHR", "SFO"],
+    ["SFO", "SAN"],
+    ["SFO", "DSM"],
+    ["SAN", "EYW"]
+  ],
+  "startingAirport": "LGA"
+}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

@@ -21,4 +21,16 @@ target/
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
-build/
+build/%
+
+# MkDocs generated site
+site/
+
+# PowerPoint slides and backup archive (large binary files)
+Slides/
+*.tar.gz
+*.pptx
+
+# PDF files (large binaries)
+*.pdf
+.venv/

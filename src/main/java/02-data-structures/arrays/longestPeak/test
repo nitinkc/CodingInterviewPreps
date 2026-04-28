@@ -1,0 +1,275 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+Run Code
+Solution 1
+1
+// Copyright © 2020 AlgoExpert, LLC. All rights reserved.
+2
+​
+3
+class Program {
+4
+  // O(n) time | O(1) space - where n is the length of the input array
+5
+  public static int longestPeak(int[] array) {
+6
+    int longestPeakLength = 0;
+7
+    int i = 1;
+8
+    while (i < array.length - 1) {
+9
+      boolean isPeak = array[i - 1] < array[i] && array[i] > array[i + 1];
+10
+      if (!isPeak) {
+11
+        i += 1;
+12
+        continue;
+13
+      }
+14
+​
+15
+      int leftIdx = i - 2;
+16
+      while (leftIdx >= 0 && array[leftIdx] < array[leftIdx + 1]) {
+17
+        leftIdx -= 1;
+18
+      }
+19
+​
+20
+      int rightIdx = i + 2;
+21
+      while (rightIdx < array.length && array[rightIdx] < array[rightIdx - 1]) {
+22
+        rightIdx += 1;
+23
+      }
+24
+      int currentPeakLength = rightIdx - leftIdx - 1;
+25
+      if (currentPeakLength > longestPeakLength) {
+26
+        longestPeakLength = currentPeakLength;
+27
+      }
+28
+      i = rightIdx;
+29
+    }
+30
+    return longestPeakLength;
+31
+  }
+32
+}
+33
+​
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{"array": [1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3]}
+Test Case 2
+{"array": []}
+Test Case 3
+{"array": [1, 3, 2]}
+Test Case 4
+{"array": [1, 2, 3, 4, 5, 1]}
+Test Case 5
+{"array": [5, 4, 3, 2, 1, 2, 1]}
+Test Case 6
+{"array": [5, 4, 3, 2, 1, 2, 10, 12, -3, 5, 6, 7, 10]}
+Test Case 7
+{"array": [5, 4, 3, 2, 1, 2, 10, 12]}
+Test Case 8
+{"array": [1, 2, 3, 4, 5, 6, 10, 100, 1000]}
+Test Case 9
+{"array": [1, 2, 3, 3, 2, 1]}
+Test Case 10
+{"array": [1, 1, 3, 2, 1]}
+Test Case 11
+{"array": [1, 2, 3, 2, 1, 1]}
+Test Case 12
+{
+  "array": [
+    1,
+    1,
+    1,
+    2,
+    3,
+    10,
+    12,
+    -3,
+    -3,
+    2,
+    3,
+    45,
+    800,
+    99,
+    98,
+    0,
+    -1,
+    -1,
+    2,
+    3,
+    4,
+    5,
+    0,
+    -1,
+    -1
+  ]
+}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Yay, our code passed all the test cases!
+
+Test Case 1 passed!
+Our Code's Output
+6
+Input(s)
+{"array": [1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3]}
+Test Case 2 passed!
+Our Code's Output
+0
+Input(s)
+{"array": []}
+Test Case 3 passed!
+Our Code's Output
+3
+Input(s)
+{"array": [1, 3, 2]}
+Test Case 4 passed!
+Our Code's Output
+6
+Input(s)
+{"array": [1, 2, 3, 4, 5, 1]}
+Test Case 5 passed!
+Our Code's Output
+3
+Input(s)
+{"array": [5, 4, 3, 2, 1, 2, 1]}
+Test Case 6 passed!
+Our Code's Output
+5
+Input(s)
+{"array": [5, 4, 3, 2, 1, 2, 10, 12, -3, 5, 6, 7, 10]}
+Test Case 7 passed!
+Our Code's Output
+0
+Input(s)
+{"array": [5, 4, 3, 2, 1, 2, 10, 12]}
+Test Case 8 passed!
+Our Code's Output
+0
+Input(s)
+{"array": [1, 2, 3, 4, 5, 6, 10, 100, 1000]}
+Test Case 9 passed!
+Our Code's Output
+0
+Input(s)
+{"array": [1, 2, 3, 3, 2, 1]}
+Test Case 10 passed!
+Our Code's Output
+4
+Input(s)
+{"array": [1, 1, 3, 2, 1]}
+Test Case 11 passed!
+Our Code's Output
+5
+Input(s)
+{"array": [1, 2, 3, 2, 1, 1]}
+Test Case 12 passed!
+Our Code's Output
+9
+Input(s)
+{
+  "array": [
+    1,
+    1,
+    1,
+    2,
+    3,
+    10,
+    12,
+    -3,
+    -3,
+    2,
+    3,
+    45,
+    800,
+    99,
+    98,
+    0,
+    -1,
+    -1,
+    2,
+    3,
+    4,
+    5,
+    0,
+    -1,
+    -1
+  ]
+}

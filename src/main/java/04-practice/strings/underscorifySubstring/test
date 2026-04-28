@@ -1,0 +1,102 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{
+  "string": "testthis is a testtest to see if testestest it works",
+  "substring": "test"
+}
+Test Case 2
+{"string": "this is a test to see if it works", "substring": "test"}
+Test Case 3
+{"string": "test this is a test to see if it works", "substring": "test"}
+Test Case 4
+{"string": "testthis is a test to see if it works", "substring": "test"}
+Test Case 5
+{
+  "string": "testthis is a testest to see if testestes it works",
+  "substring": "test"
+}
+Test Case 6
+{"string": "this is a test to see if it works and test", "substring": "test"}
+Test Case 7
+{
+  "string": "this is a test to see if it works and test",
+  "substring": "bfjawkfja"
+}
+Test Case 8
+{"string": "ttttttttttttttbtttttctatawtatttttastvb", "substring": "ttt"}
+Test Case 9
+{"string": "tzttztttz", "substring": "ttt"}
+Test Case 10
+{"string": "abababababababababababababaababaaabbababaa", "substring": "a"}
+Test Case 11
+{"string": "abcabcabcabcabcabcabcabcabcabcabcabcabcabc", "substring": "abc"}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+

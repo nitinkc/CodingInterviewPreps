@@ -1,0 +1,288 @@
+
+AlgoExpert
+
+Tri Layout
+Quad Layout
+Tri Layout
+Java
+C#
+C++
+Go
+Java
+JavaScript
+Python
+Swift
+12px
+12px
+13px
+14px
+15px
+16px
+17px
+18px
+Sublime
+Sublime
+Emacs
+Vim
+
+Default
+Default
+Duotone
+Eclipse
+Elegant
+Idea
+Mdn-like
+Solarized Light
+
+
+00:00:00
+00:00:00
+Start
+Reset
+
+
+Prompt
+
+Scratchpad
+
+Your Solutions
+
+Our Solution(s)
+
+Video Explanation
+
+
+Go to Conceptual Overview
+
+Go to Code Walkthrough
+
+Tests
+
+Quick Test
+
+
+Test Case 1
+{
+  "classMethodsToCall": [
+    {"arguments": [5], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [7], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [2], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"}
+  ]
+}
+Test Case 2
+{
+  "classMethodsToCall": [
+    {"arguments": [2], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [7], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [1], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [8], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [3], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [9], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"}
+  ]
+}
+Test Case 3
+{
+  "classMethodsToCall": [
+    {"arguments": [5], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [5], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [5], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [5], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [8], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [8], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [0], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [8], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [9], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [5], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"}
+  ]
+}
+Test Case 4
+{
+  "classMethodsToCall": [
+    {"arguments": [2], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [0], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [5], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [4], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [4], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [11], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [-11], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"},
+    {"arguments": [6], "method": "push"},
+    {"arguments": [], "method": "getMin"},
+    {"arguments": [], "method": "getMax"},
+    {"arguments": [], "method": "peek"},
+    {"arguments": [], "method": "pop"}
+  ]
+}
+
+Custom Output
+
+Raw Output
+
+Submit Code
+Run or submit code when you're ready.
+
