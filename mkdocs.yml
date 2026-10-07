@@ -78,13 +78,13 @@ markdown_extensions:
   - abbr
   - attr_list
   - md_in_html
-  - pymdownx.snippets:
-      base_path:
-        - docs
-        - .            # lets docs pages single-source the sandbox README/RUNBOOK
-      check_paths: true
-      auto_append:
-        - theory/abbreviations.md   # hover tooltips for abbreviations on every page
+#  - pymdownx.snippets:
+#      base_path:
+#        - docs
+#        - .            # lets docs pages single-source the sandbox README/RUNBOOK
+#      check_paths: true
+#      auto_append:
+#        - theory/abbreviations.md   # hover tooltips for abbreviations on every page
   - tables
   - codehilite
 
