@@ -48,7 +48,7 @@ It needs **monotonicity**: growing the window pushes the constraint one way, and
 
 ---
 
-## 2. Variation 1: Fixed length
+## Variation 1: Fixed length
 
 **Theory.** The window size is given, so no `while` loop is needed. Add the new right element, drop the old left one. Moving from `[10,8,5,16]` to `[8,5,16,7]` changes only two elements, so recomputing the whole sum is wasted work.
 
@@ -76,7 +76,7 @@ static int maxSumK(int[] nums, int k) {
 
 ---
 
-## 3. Variation 2: Sum constraint
+## Variation 2: Sum constraint
 
 **Theory.** The size is not fixed: the window grows and shrinks. Expand `r` every step. When the sum exceeds `k`, shrink from the left until valid again.
 
@@ -106,7 +106,7 @@ static int longestSumAtMost(int[] nums, int k) {
 
 ---
 
-## 4. Variation 3: "Number of" constraint
+## Variation 3: "Number of" constraint
 
 **Theory.** The state is a **counter** of the thing you are limiting (zeros, a specific character, distinct characters). It is the same skeleton as variation 2 with a different state. For "at most K distinct", the state becomes a `HashMap<char, count>`, and "invalid" is `map.size() > K`.
 
@@ -155,7 +155,7 @@ static int longestKDistinct(String s, int K) {
 
 ---
 
-## 5. Variation 4: Not repeated
+## Variation 4: Not repeated
 
 **Theory.** The state is a **set** of what is in the window. "Invalid" means the *incoming* character is already in the set. Note the order: the check happens **before** adding, unlike variations 2 and 3 where you add first and then check.
 
@@ -183,7 +183,7 @@ For lowercase-only input, a `boolean[26]` is faster and is often what interviewe
 
 ---
 
-## 6. Variation 5: Number of subarrays
+## Variation 5: Number of subarrays
 
 **Theory.** This is the one people find hard. The trick is the counting line.
 
@@ -223,7 +223,7 @@ static int countProductLessThan(int[] nums, int k) {
 
 ---
 
-## 7. Pitfalls checklist
+## Pitfalls checklist
 
 - **Monotonicity:** negatives break sum windows; zeros and negatives break product windows.
 - **Exactly K:** `atMost(K) - atMost(K-1)`, never a direct slide.
@@ -233,6 +233,6 @@ static int countProductLessThan(int[] nums, int k) {
 - **Overflow:** use `long` for products and large sums.
 - **Edge cases:** `k <= 1` for products, `k > n` for fixed windows, empty input.
 
-## 8. Suggested first pass
+## Suggested first pass
 
 One problem per type, then the harder ones: **643 -> 1208 -> 1004 -> 3 -> 713**.
