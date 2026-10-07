@@ -1,25 +1,91 @@
 site_name: Coding Interview Preparation
 site_description: Complete documentation for algorithms and data structures
+site_url: "https://nitinkc.github.io/CodingInterviewPreps/"
+repo_url: "https://github.com/nitinkc/CodingInterviewPreps.git"
+repo_name: CodingInterviewPreps
+
 theme:
   name: material
-  palette:
-    primary: blue
-    accent: indigo
   features:
+    # Navigation
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
-    - toc.integrate
+    - navigation.expand
+    - navigation.indexes      # section landing pages (quiz/, sessions/)
+    - navigation.path
+    - navigation.top           # Back-to-top button
+    - navigation.footer        # Prev/Next page links
+    # navigation.instant disabled — breaks live reload (re-enable for production builds)
+    # - navigation.instant
+    # - navigation.instant.progress
+    # Search
     - search.suggest
     - search.highlight
+    - search.share
+    # Content
+    - content.code.copy
+    - content.code.annotate    # (1) style code annotations
+    - content.tabs.link        # Sync tabs across page
+    - content.tooltips
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 plugins:
-  - search
+  - search:
+      lang: en
+  - mkdocs_quiz
+  - glightbox
 
 markdown_extensions:
-  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+      guess_lang: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+      title: On this page
+  - abbr
+  - attr_list
+  - md_in_html
+  - pymdownx.snippets:
+      base_path:
+        - docs
+        - .            # lets docs pages single-source the sandbox README/RUNBOOK
+      check_paths: true
+      auto_append:
+        - theory/abbreviations.md   # hover tooltips for abbreviations on every page
   - tables
-  - toc
   - codehilite
 
 nav:
