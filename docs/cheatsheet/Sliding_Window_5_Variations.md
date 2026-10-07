@@ -236,7 +236,3 @@ static int countProductLessThan(int[] nums, int k) {
 ## 8. Suggested first pass
 
 One problem per type, then the harder ones: **643 -> 1208 -> 1004 -> 3 -> 713**.
-
----
-
-Source: the *5 Variations of Sliding Window* handout (NeetCode). All Java snippets were compiled and checked against brute force on 3000 random inputs.
