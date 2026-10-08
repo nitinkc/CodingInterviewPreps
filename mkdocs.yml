@@ -2,7 +2,7 @@ site_name: Coding Interview Preparation
 site_description: Complete documentation for algorithms and data structures
 site_url: "https://nitinkc.github.io/CodingInterviewPreps/"
 repo_url: "https://github.com/nitinkc/CodingInterviewPreps.git"
-repo_name: CodingInterviewPreps
+repo_name: Algo Interview Preps
 
 theme:
   name: material
@@ -31,14 +31,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
+      primary: black
       accent: indigo
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
+      primary: black
+      primary: black
       accent: indigo
       toggle:
         icon: material/weather-sunny
