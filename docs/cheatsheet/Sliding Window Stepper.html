@@ -1,0 +1,440 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sliding Window Stepper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: tabs on top; left, the stage (cells, caption, controls); right, the code with the running line highlighted. */
+:root{
+  --bg:#f1f4f8; --surface:#ffffff; --surface2:#eaf0f6; --fg:#13202e; --muted:#566678; --line:#cfd8e3;
+  --accent:#2b6cc4; --on-accent:#ffffff;
+  --win-bg:#d9e8fb; --win-line:#2b6cc4;
+  --add:#117a49; --add-bg:#d3f0e1;
+  --drop:#b93a2a; --drop-bg:#fadcd7;
+  --hl:#fdf0c0;
+  --sans:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d141c; --surface:#151f2a; --surface2:#1b2835; --fg:#e5ecf4; --muted:#92a3b6; --line:#2a3947;
+    --accent:#6aa4f0; --on-accent:#0d141c;
+    --win-bg:#1c3556; --win-line:#6aa4f0;
+    --add:#4cc58a; --add-bg:#12331f;
+    --drop:#f27b6c; --drop-bg:#3b1c18;
+    --hl:#3a3414;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d141c; --surface:#151f2a; --surface2:#1b2835; --fg:#e5ecf4; --muted:#92a3b6; --line:#2a3947;
+  --accent:#6aa4f0; --on-accent:#0d141c;
+  --win-bg:#1c3556; --win-line:#6aa4f0;
+  --add:#4cc58a; --add-bg:#12331f;
+  --drop:#f27b6c; --drop-bg:#3b1c18;
+  --hl:#3a3414;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.5;padding-inline:16px;padding-block:22px 44px}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:clamp(1.5rem,4.2vw,2.1rem);line-height:1.15;margin:0 0 6px;letter-spacing:-0.015em;text-wrap:balance}
+.lede{color:var(--muted);margin:0 0 20px;max-width:64ch}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tab{font:inherit;font-weight:600;padding:8px 14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.tab:focus-visible,.ctl:focus-visible,.kbtn:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.insight{background:var(--surface2);border-radius:10px;padding:14px 16px;margin-bottom:16px}
+.insight h2{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.insight ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px;max-width:78ch}
+.grid{display:grid;gap:16px;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0}
+.problem{font-weight:600;margin:0 0 4px}
+.params{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 12px;font-size:14px;color:var(--muted)}
+.kbtn{font:600 13px var(--mono);padding:3px 10px;border-radius:6px;border:1px solid var(--line);background:var(--surface2);color:var(--fg);cursor:pointer}
+.kbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.cellwrap{overflow-x:auto;padding-bottom:2px;margin-top:10px}
+.cells{display:grid;gap:4px;justify-content:start}
+.col{display:flex;flex-direction:column;min-width:0}
+.ptrs{min-height:2.9em;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font:700 11px/1.25 var(--mono)}
+.ptr.l,.ptr.r{color:var(--accent)} .ptr.new{color:var(--add)} .ptr.old{color:var(--drop)}
+.cell{height:52px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--line);background:var(--surface2);border-radius:6px;font:600 clamp(15px,3.4vw,20px) var(--mono);transition:background .2s,border-color .2s}
+.cell.in{background:var(--win-bg);border-color:var(--win-line)}
+.cell.add{background:var(--add-bg);border-color:var(--add)}
+.cell.drop{background:var(--drop-bg);border-color:var(--drop);border-style:dashed}
+.idx{text-align:center;color:var(--muted);font:12px var(--mono);margin-top:4px}
+.mark{text-align:center;font:700 11px var(--mono);min-height:1.4em;margin-top:1px}
+.mark.add{color:var(--add)} .mark.drop{color:var(--drop)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin:8px 0 0}
+.sw{display:inline-block;width:11px;height:11px;border-radius:3px;border:1.5px solid;vertical-align:-1px;margin-right:5px}
+.vars{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{display:flex;gap:7px;align-items:baseline;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:3px 12px;font:500 13px var(--mono)}
+.chip b{font-weight:700}
+.extra{margin:0 0 14px;font-size:13px}
+.wins{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.wchip{font:500 12px var(--mono);padding:3px 9px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
+.wchip.done{background:var(--surface2);color:var(--fg)}
+.wchip.cur{background:var(--win-bg);border-color:var(--win-line);color:var(--fg);font-weight:700}
+.work{color:var(--muted)}
+.work b{color:var(--fg);font-family:var(--mono)}
+.counts{border-collapse:collapse;font:500 13px var(--mono)}
+.counts th,.counts td{border:1px solid var(--line);padding:3px 9px;text-align:center}
+.counts th{background:var(--surface2);font-weight:700}
+.counts td.rowh{text-align:left;font-weight:700;background:var(--surface2)}
+.counts td.bad{background:var(--drop-bg)} .counts td.ok{background:var(--add-bg)}
+.setrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font:500 13px var(--mono)}
+.setrow .el{border:1px solid var(--win-line);background:var(--win-bg);border-radius:6px;padding:1px 9px;font-weight:700}
+.caption{background:var(--surface2);border-radius:8px;padding:12px 14px;min-height:6.6em;font-size:15px}
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.ctl{font:inherit;font-weight:600;padding:7px 14px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.ctl.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent);min-width:5.4em}
+.ctl:disabled{opacity:.45;cursor:default}
+.scrub{flex:1 1 130px;min-width:0;accent-color:var(--accent)}
+.stepno{font:500 12px var(--mono);color:var(--muted);white-space:nowrap}
+.codehead{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.code{font:13px/1.7 var(--mono);overflow-x:auto;margin:0 -16px;padding:0}
+.ln{display:flex;white-space:pre;border-left:3px solid transparent;padding-right:14px;width:max-content;min-width:100%}
+.ln .no{width:2.6em;text-align:right;color:var(--muted);padding-right:12px;user-select:none;flex:none}
+.ln.on{background:var(--hl);border-left-color:var(--accent)}
+@media (prefers-reduced-motion: reduce){.cell{transition:none}}
+</style>
+
+<div class="wrap">
+  <h1>Sliding Window Stepper</h1>
+  <p class="lede">Step through the Java code one line at a time and watch the window, the pointers and the variables change together.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="insight"><h2>How to read this</h2><ul id="insight"></ul></div>
+  <div class="grid">
+    <div class="card">
+      <p class="problem" id="problem"></p>
+      <div class="params" id="params"></div>
+      <div class="cellwrap"><div class="cells" id="cells"></div></div>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--win-bg);border-color:var(--win-line)"></i>inside the window</span>
+        <span><i class="sw" style="background:var(--add-bg);border-color:var(--add)"></i>enters</span>
+        <span><i class="sw" style="background:var(--drop-bg);border-color:var(--drop);border-style:dashed"></i>leaves</span>
+      </div>
+      <div class="vars" id="vars"></div>
+      <div class="extra" id="extra"></div>
+      <div class="caption" id="caption" aria-live="polite"></div>
+      <div class="controls">
+        <button class="ctl" id="restart">Restart</button>
+        <button class="ctl" id="back">Back</button>
+        <button class="ctl primary" id="play">Play</button>
+        <button class="ctl" id="next">Next</button>
+        <input class="scrub" id="scrub" type="range" min="0" max="0" value="0" aria-label="Step">
+        <span class="stepno" id="stepno"></span>
+      </div>
+    </div>
+    <div class="card">
+      <p class="codehead">Java</p>
+      <div class="code" id="code"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function mk(extra){
+    var o = {adds:[],drops:[],ptrs:[],win:null,vars:[],cur:-1};
+    for (var k in extra) o[k] = extra[k];
+    if (!Array.isArray(o.line)) o.line = [o.line];
+    return o;
+  }
+
+  /* ---------- 1. Fixed window over numbers ---------- */
+  function buildSum(k){
+    var a=[6,10,8,5,16,7,9,6], n=a.length, F=[], window=0, best=null, slide=0, naive=0, i, r;
+    var starts=n-k+1, sums=[];
+    for (var s=0;s<starts;s++){ sums.push(a.slice(s,s+k).reduce(function(x,y){return x+y;},0)); }
+    function vars(){ return [['window',window],['best',best===null?'?':best]]; }
+    function push(o){ o.cells=a.map(String); o.vars=vars(); o.sums=sums; o.k=k; o.slide=slide; o.naive=naive; F.push(mk(o)); }
+    push({line:1, caption:'Start with window = 0. First we build the very first window by hand.'});
+    for (i=0;i<k;i++){
+      window+=a[i]; slide++; naive++;
+      push({line:2, win:[0,i], adds:[i], ptrs:[{i:i,label:'i',kind:'r'}],
+        caption:'Build the first window. Add nums['+i+'] = '+a[i]+'. Sum so far: '+window+'.'});
+    }
+    best=window;
+    push({line:3, win:[0,k-1], cur:0,
+      caption:'The first window [0..'+(k-1)+'] is complete. Its sum is '+window+', so best = '+best+'.'});
+    for (r=k;r<n;r++){
+      var inn=a[r], out=a[r-k];
+      push({line:[4,5], win:[r-k,r-1], adds:[r], drops:[r-k], cur:r-k,
+        ptrs:[{i:r,label:'r',kind:'new'},{i:r-k,label:'r−k',kind:'old'}],
+        caption:'Move the window one cell right. nums['+r+'] = '+inn+' enters on the right. nums['+(r-k)+'] = '+out+' falls off the left. The other '+(k-1)+' numbers stay, so they are not added again. New sum = '+window+' + '+inn+' − '+out+'.'});
+      window+=inn-out; slide+=2; naive+=k;
+      push({line:5, win:[r-k+1,r], cur:r-k+1,
+        ptrs:[{i:r-k+1,label:'l',kind:'l'},{i:r,label:'r',kind:'r'}],
+        caption:'The window is now ['+(r-k+1)+'..'+r+'] with sum '+window+'. The code never stores l. It is always r − k + 1 = '+(r-k+1)+'.'});
+      var old=best; best=Math.max(best,window);
+      push({line:6, win:[r-k+1,r], cur:r-k+1,
+        ptrs:[{i:r-k+1,label:'l',kind:'l'},{i:r,label:'r',kind:'r'}],
+        caption:'max('+old+', '+window+') = '+best+'. '+(best>old?'New best.':'Best stays the same.')});
+    }
+    push({line:8, cur:starts-1, caption:'The loop is over. Return best = '+best+'.'});
+    return F;
+  }
+
+  /* ---------- 2. Fixed window over letters (counts) ---------- */
+  function buildPerm(){
+    var s1='ab', s2='eidbaooo', n=s1.length, m=s2.length, F=[], need={}, win={}, i, r, rr=null;
+    var letters=Array.from(new Set((s1+s2).split(''))).sort();
+    letters.forEach(function(c){need[c]=0;win[c]=0;});
+    function eq(){ return letters.every(function(c){return need[c]===win[c];}); }
+    // 'win' name is reused for the range in the frame; counts live in cnt
+    function pushF(o){
+      var range=o.win||null; delete o.win;
+      o.cells=s2.split(''); o.vars=[['n',n],['m',m],['r',rr===null?'?':rr]];
+      o.letters=letters; o.needC=Object.assign({},need); o.winC=Object.assign({},win);
+      var f=mk(o); f.win=range; F.push(f);
+    }
+    pushF({line:[2], caption:'Two count tables. need will hold the letters of s1 = "'+s1+'". win will hold the letters inside the current window of s2.'});
+    for (i=0;i<n;i++){
+      need[s1[i]]++; win[s2[i]]++;
+      pushF({line:[4,5], win:[0,i], adds:[i], ptrs:[{i:i,label:'i',kind:'r'}],
+        caption:'need counts \''+s1[i]+'\' from s1. win counts \''+s2[i]+'\', the letter at s2['+i+'].'});
+    }
+    var e=eq();
+    pushF({line:7, win:[0,n-1], cmp:e,
+      caption: e ? 'need and win match, so the window is a permutation. Return true.'
+                 : 'Compare the tables. They differ, so "'+s2.slice(0,n)+'" is not a permutation of "'+s1+'".'});
+    if (!e){
+      for (r=n;r<m;r++){
+        rr=r;
+        win[s2[r]]++;
+        pushF({line:9, win:[r-n,r], adds:[r], ptrs:[{i:r,label:'r',kind:'new'}],
+          caption:'Add the letter entering on the right: \''+s2[r]+'\'. For a moment the window holds '+(n+1)+' letters.'});
+        win[s2[r-n]]--;
+        pushF({line:10, win:[r-n,r], drops:[r-n], ptrs:[{i:r-n,label:'r−n',kind:'old'},{i:r,label:'r',kind:'new'}],
+          caption:'Drop the letter leaving on the left: \''+s2[r-n]+'\'. The window is back to '+n+' letters.'});
+        e=eq();
+        pushF({line:11, win:[r-n+1,r], cmp:e,
+          caption: e ? 'The tables match. "'+s2.slice(r-n+1,r+1)+'" is a permutation of "'+s1+'". Return true.'
+                     : 'Compare the tables. They differ, so "'+s2.slice(r-n+1,r+1)+'" is not a permutation. Slide again.'});
+        if (e) break;
+      }
+      if (!e) pushF({line:13, caption:'No window matched. Return false.'});
+    }
+    return F;
+  }
+
+  /* ---------- 3. Variable window, no repeats ---------- */
+  function buildUniq(){
+    var s='abcbdea', n=s.length, F=[], l=0, best=0, rr=null, seen=new Set(), r;
+    function push(o){
+      o.cells=s.split(''); o.vars=[['l',l],['r',rr===null?'?':rr],['best',best]]; o.setv=Array.from(seen);
+      F.push(mk(o));
+    }
+    push({line:[1,2], caption:'Start with an empty window (l = 0), an empty set and best = 0.'});
+    for (r=0;r<n;r++){
+      rr=r; var ch=s[r], first=true;
+      while (true){
+        var dup=seen.has(ch);
+        var w = l<=r-1 ? [l,r-1] : null;
+        push({line:[3,4], win:w, ptrs:[{i:l,label:'l',kind:'l'},{i:r,label:'r',kind:'new'}],
+          caption: first
+            ? (dup ? 'Next character is \''+ch+'\'. It is already in the window, so the window cannot take it yet.'
+                   : 'Next character is \''+ch+'\'. It is not in the window, so it can join.')
+            : (dup ? '\''+ch+'\' is still in the window. Keep dropping.'
+                   : '\''+ch+'\' is gone from the window. Stop dropping.')});
+        if (!dup) break;
+        var out=s[l], oldL=l;
+        seen.delete(out); l++;
+        push({line:5, win:[oldL,r-1], drops:[oldL], ptrs:[{i:l,label:'l',kind:'l'},{i:r,label:'r',kind:'new'}],
+          caption:'Drop \''+out+'\' from the left and move l to '+l+'.'});
+        first=false;
+      }
+      seen.add(ch);
+      push({line:6, win:[l,r], adds:[r], ptrs:[{i:l,label:'l',kind:'l'},{i:r,label:'r',kind:'r'}],
+        caption:'Add \''+ch+'\' to the set. The window ['+l+'..'+r+'] has no repeated letter.'});
+      var len=r-l+1, old=best; best=Math.max(best,len);
+      push({line:7, win:[l,r], ptrs:[{i:l,label:'l',kind:'l'},{i:r,label:'r',kind:'r'}],
+        caption:'Length = r − l + 1 = '+len+'. best = max('+old+', '+len+') = '+best+'.'});
+    }
+    push({line:9, caption:'The loop is over. Return best = '+best+'.'});
+    return F;
+  }
+
+  var CODE_SUM = [
+    'static int maxSumK(int[] nums, int k) {',
+    '    int window = 0;',
+    '    for (int i = 0; i < k; i++) window += nums[i];',
+    '    int best = window;',
+    '    for (int r = k; r < nums.length; r++) {',
+    '        window += nums[r] - nums[r - k];',
+    '        best = Math.max(best, window);',
+    '    }',
+    '    return best;',
+    '}'
+  ];
+  var CODE_PERM = [
+    'int n = s1.length(), m = s2.length();',
+    'if (n > m) return false;',
+    'int[] need = new int[26], win = new int[26];',
+    'for (int i = 0; i < n; i++) {',
+    '    need[s1.charAt(i) - \'a\']++;',
+    '    win[s2.charAt(i) - \'a\']++;',
+    '}',
+    'if (Arrays.equals(need, win)) return true;',
+    'for (int r = n; r < m; r++) {',
+    '    win[s2.charAt(r) - \'a\']++;       // add right',
+    '    win[s2.charAt(r - n) - \'a\']--;   // drop left',
+    '    if (Arrays.equals(need, win)) return true;',
+    '}',
+    'return false;'
+  ];
+  var CODE_UNIQ = [
+    'static int longestUnique(String s) {',
+    '    Set<Character> seen = new HashSet<>();',
+    '    int l = 0, best = 0;',
+    '    for (int r = 0; r < s.length(); r++) {',
+    '        while (seen.contains(s.charAt(r)))',
+    '            seen.remove(s.charAt(l++));',
+    '        seen.add(s.charAt(r));',
+    '        best = Math.max(best, r - l + 1);',
+    '    }',
+    '    return best;',
+    '}'
+  ];
+
+  var ALGOS = [
+    { id:'sum', tab:'Numbers, fixed window', code:CODE_SUM, kOptions:[2,3,4,5],
+      problem:function(k){ return 'Find the largest sum of any '+k+' consecutive numbers in this array.'; },
+      insight:[
+        'Your picture is right: the window moves one cell at a time, [0..3], then [1..4], then [2..5].',
+        'The code does not store the window’s left edge. r is the right edge, and the left edge is always r − k + 1.',
+        'It also does not re-add the k numbers of every window. It takes the old sum, adds the one number that enters and subtracts the one that leaves.'
+      ],
+      build:function(k){ return buildSum(k); } },
+    { id:'perm', tab:'Letters, fixed window', code:CODE_PERM,
+      problem:function(){ return 'Does s2 = "eidbaooo" contain a permutation of s1 = "ab"?'; },
+      insight:[
+        'Same fixed-size window as the numbers version. The state is a table of letter counts instead of one sum.',
+        'A window is a permutation of s1 exactly when its letter counts equal the letter counts of s1.',
+        'Each slide changes two counts: +1 for the letter entering and −1 for the letter leaving. The code adds first, so the window briefly holds one extra letter.'
+      ],
+      build:function(){ return buildPerm(); } },
+    { id:'uniq', tab:'Letters, growing window', code:CODE_UNIQ,
+      problem:function(){ return 'Longest substring of "abcbdea" with no repeated letter.'; },
+      insight:[
+        'Here the window size changes. Both l and r move, but each only ever moves right, so the total work stays linear.',
+        'r takes one character per step. If that character is already inside, l moves right and drops characters until the duplicate is gone.',
+        'The window [l..r] always holds distinct letters, so r − l + 1 is a valid length at every step.'
+      ],
+      build:function(){ return buildUniq(); } }
+  ];
+
+  var cur = 0, K = 4, frames = [], step = 0, timer = null;
+
+  function stop(){ if (timer){ clearInterval(timer); timer=null; } $('play').textContent='Play'; }
+  function load(){
+    stop();
+    var A = ALGOS[cur];
+    frames = A.build(K); step = 0;
+    $('problem').textContent = A.problem(K);
+    $('insight').innerHTML = A.insight.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('');
+    var p = $('params');
+    if (A.kOptions){
+      p.hidden = false;
+      p.innerHTML = '<span>Window size k</span>' + A.kOptions.map(function(v){
+        return '<button class="kbtn" data-k="'+v+'" aria-pressed="'+(v===K)+'">'+v+'</button>'; }).join('');
+      Array.prototype.forEach.call(p.querySelectorAll('.kbtn'), function(b){
+        b.addEventListener('click', function(){ K = +b.getAttribute('data-k'); load(); });
+      });
+    } else { p.hidden = true; p.innerHTML=''; }
+    $('code').innerHTML = A.code.map(function(t,i){
+      return '<div class="ln" data-i="'+i+'"><span class="no">'+(i+1)+'</span><span>'+esc(t)+'</span></div>'; }).join('');
+    $('scrub').max = frames.length-1;
+    Array.prototype.forEach.call(document.querySelectorAll('.tab'), function(t,i){ t.setAttribute('aria-selected', String(i===cur)); });
+    render();
+  }
+
+  function render(){
+    var f = frames[step], n = f.cells.length;
+    // cells
+    var m = {};
+    f.ptrs.forEach(function(p){ (m[p.i]=m[p.i]||[]).push(p); });
+    var html = '';
+    for (var i=0;i<n;i++){
+      var inWin = f.win && i>=f.win[0] && i<=f.win[1];
+      var isAdd = f.adds.indexOf(i)>=0, isDrop = f.drops.indexOf(i)>=0;
+      var cls = 'cell' + (isDrop?' drop':isAdd?' add':inWin?' in':'');
+      var ptrs = (m[i]||[]).map(function(p){ return '<span class="ptr '+p.kind+'">'+esc(p.label)+'</span>'; }).join('');
+      var mark = isAdd ? '<div class="mark add">+ in</div>' : isDrop ? '<div class="mark drop">− out</div>' : '<div class="mark"></div>';
+      html += '<div class="col"><div class="ptrs">'+ptrs+'</div><div class="'+cls+'">'+esc(f.cells[i])+'</div><div class="idx">'+i+'</div>'+mark+'</div>';
+    }
+    var cells = $('cells');
+    cells.style.gridTemplateColumns = 'repeat('+n+', minmax(34px, 62px))';
+    cells.innerHTML = html;
+    // vars
+    $('vars').innerHTML = f.vars.map(function(v){ return '<span class="chip">'+esc(v[0])+' <b>'+esc(v[1])+'</b></span>'; }).join('');
+    // extra
+    var x = '';
+    if (f.sums){
+      x += '<div class="wins">' + f.sums.map(function(sv,s){
+        var c = s<f.cur ? 'done' : s===f.cur ? 'cur' : '';
+        var shown = s<=f.cur ? sv : '?';
+        return '<span class="wchip '+c+'">['+s+'..'+(s+f.k-1)+'] = '+shown+'</span>'; }).join('') + '</div>';
+      x += '<div class="work">Adds and subtracts so far. Recomputing every window: <b>'+f.naive+'</b>. Sliding: <b>'+f.slide+'</b>.</div>';
+    }
+    if (f.letters){
+      x += '<table class="counts"><tr><th></th>'+f.letters.map(function(c){return '<th>'+esc(c)+'</th>';}).join('')+'</tr>';
+      ['need','win'].forEach(function(row){
+        var src = row==='need' ? f.needC : f.winC;
+        x += '<tr><td class="rowh">'+row+'</td>' + f.letters.map(function(c){
+          var cl = f.cmp===undefined ? '' : (f.needC[c]===f.winC[c] ? 'ok' : 'bad');
+          return '<td class="'+cl+'">'+src[c]+'</td>'; }).join('') + '</tr>';
+      });
+      x += '</table>';
+    }
+    if (f.setv){
+      x += '<div class="setrow">seen = {'+ (f.setv.length ? f.setv.map(function(c){return '<span class="el">'+esc(c)+'</span>';}).join('') : '<span style="color:var(--muted)">empty</span>') +'}</div>';
+    }
+    $('extra').innerHTML = x; $('extra').hidden = !x;
+    // caption, code, controls
+    $('caption').textContent = f.caption;
+    Array.prototype.forEach.call($('code').children, function(ln){
+      ln.classList.toggle('on', f.line.indexOf(+ln.getAttribute('data-i'))>=0);
+    });
+    $('scrub').value = step;
+    $('stepno').textContent = 'Step '+(step+1)+' of '+frames.length;
+    $('back').disabled = step===0; $('restart').disabled = step===0;
+    $('next').disabled = step===frames.length-1;
+  }
+
+  function go(d){ var s=step+d; if (s<0||s>=frames.length) return; step=s; render(); }
+  $('next').addEventListener('click', function(){ stop(); go(1); });
+  $('back').addEventListener('click', function(){ stop(); go(-1); });
+  $('restart').addEventListener('click', function(){ stop(); step=0; render(); });
+  $('scrub').addEventListener('input', function(){ stop(); step=+this.value; render(); });
+  $('play').addEventListener('click', function(){
+    if (timer){ stop(); return; }
+    if (step===frames.length-1){ step=0; render(); }
+    $('play').textContent='Pause';
+    timer = setInterval(function(){
+      if (step>=frames.length-1){ stop(); return; }
+      go(1);
+    }, 1300);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.target && e.target.tagName==='INPUT') return;
+    if (e.key==='ArrowRight'){ stop(); go(1); }
+    if (e.key==='ArrowLeft'){ stop(); go(-1); }
+  });
+
+  var tabs = $('tabs');
+  ALGOS.forEach(function(A,i){
+    var b = document.createElement('button');
+    b.className='tab'; b.setAttribute('role','tab'); b.textContent=A.tab;
+    b.addEventListener('click', function(){ cur=i; load(); });
+    tabs.appendChild(b);
+  });
+  load();
+})();
+</script>
+
+</body></html>
