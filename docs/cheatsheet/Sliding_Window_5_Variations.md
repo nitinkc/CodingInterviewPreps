@@ -1,6 +1,6 @@
 # Sliding Window: 5 Variations (Theory + Java + Practice)
 
-## 1. Core theory
+## Core theory
 
 A brute force checks every subarray: O(n²) or worse.
 A **sliding window** keeps one window `[l, r]` and updates its *state* incrementally.
@@ -56,24 +56,27 @@ It needs **monotonicity**: growing the window pushes the constraint one way, and
 
 ```java
 static int maxSumK(int[] nums, int k) {
-    int window = 0;
-    for (int i = 0; i < k; i++) window += nums[i];
-    int best = window;
+    int windowSum = 0;
+    for (int i = 0; i < k; i++)  //First calculate 
+        windowSum += nums[i];
+    int bestSum = windowSum;
     for (int r = k; r < nums.length; r++) {
-        window += nums[r] - nums[r - k];   // add right, drop left
-        best = Math.max(best, window);
+        windowSum += nums[r] - nums[r - k];   // add right, drop left
+        bestSum = Math.max(bestSum, windowSum);
     }
     return best;
 }
 ```
 
-**Practice (LeetCode)**
+#### **Practice (LeetCode)**
 
 - [643. Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) (Easy)
+  - int divide-by int returns a truncated int unless type casted `return (double) maxSum/k;`
 - [567. Permutation in String](https://leetcode.com/problems/permutation-in-string/) (Medium)
 - [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) (Medium)
 - [2461. Maximum Sum of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) (Medium)
 
+[Sliding Window Stepper.html](Sliding%20Window%20Stepper.html)
 ---
 
 ## Variation 2: Sum constraint
